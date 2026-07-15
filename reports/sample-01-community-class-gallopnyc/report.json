@@ -1,0 +1,405 @@
+{
+  "id": "sample-01-community-class-gallopnyc",
+  "parsed": {
+    "category": "community-class",
+    "participantName": "Aaron M.",
+    "requestedItem": "Recreational Group Riding",
+    "providerName": "GallopNYC",
+    "url": "https://gallopnyc.org/recreational-riding",
+    "statedFee": "$80 per 30-minute session",
+    "checklistAnswers": [
+      {
+        "question": "Are community classes currently approved in the budget?",
+        "answer": "YES"
+      },
+      {
+        "question": "Does the class provide opportunity for community inclusion?",
+        "answer": "YES"
+      },
+      {
+        "question": "Does the class accommodate the individual's health and/or safety needs?",
+        "answer": "YES"
+      },
+      {
+        "question": "Does the class increase independence or substitute for human assistance?",
+        "answer": "NO"
+      },
+      {
+        "question": "Is the class provided exclusively for the benefit of the participant?",
+        "answer": "YES"
+      },
+      {
+        "question": "Is the class open to and attended by the broader public?",
+        "answer": "YES"
+      },
+      {
+        "question": "Does the class have published fees? (attach link / advertised flyer)",
+        "answer": "YES"
+      },
+      {
+        "question": "Are the fees identical for both OPWDD and non-OPWDD individuals?",
+        "answer": "YES"
+      },
+      {
+        "question": "Is the class subject based? (Art, Dance, Martial Arts, Cooking)",
+        "answer": "YES"
+      },
+      {
+        "question": "Does the class provide college credits?",
+        "answer": "NO"
+      },
+      {
+        "question": "Is the class clinical in nature? (therapy)",
+        "answer": "NO"
+      },
+      {
+        "question": "Is the class given in a setting accessed only by people with Developmental Disabilities?",
+        "answer": "NO"
+      },
+      {
+        "question": "Is the class run by OPWDD or a provider-agency staff acting in their official capacities?",
+        "answer": "NO"
+      },
+      {
+        "question": "Is the class located on grounds where OPWDD services are normally provided?",
+        "answer": "NO"
+      },
+      {
+        "question": "Does the class duplicate any Medicaid state plan or HCBS waiver services (or entity that delivers such)?",
+        "answer": "NO"
+      },
+      {
+        "question": "Does the class duplicate services given through Board of Education for school-aged children?",
+        "answer": "NO"
+      },
+      {
+        "question": "Is there a published schedule of the class? (please attach)",
+        "answer": "YES"
+      },
+      {
+        "question": "Is the class being reimbursed directly? (if yes, attach a W9)",
+        "answer": "YES"
+      }
+    ],
+    "missingInfo": [],
+    "appeal": null,
+    "brokerName": "Michael Ross",
+    "durationPerSession": "30 minutes",
+    "fiCoordinator": "Leah Stern",
+    "formTitle": "Community Class Pre-approval Checklist",
+    "justification": "Aaron will build confidence and community engagement through structured recreational activities in an integrated, public setting.",
+    "lpDate": "03/14/2026",
+    "participantAge": "26",
+    "safetyFeatures": "",
+    "subjectArea": "Recreational Horseback Riding",
+    "valuedOutcome": "Aaron will build confidence and community engagement through structured recreational activities in an integrated, public setting."
+  },
+  "category": {
+    "key": "community-class",
+    "label": "Community Classes",
+    "detectHints": [
+      "Community Class Pre-approval Checklist",
+      "community class"
+    ],
+    "rateFieldLabel": "Fee per Session",
+    "capNotes": [
+      "Invoice guideline: >2 sessions/day (up to 60 min each) or >7 sessions/week at one provider requires prior approval."
+    ],
+    "webChecks": [
+      {
+        "id": "open-to-public",
+        "label": "Class is open to and attended by the broader public",
+        "criteria": "Look for evidence that the class is offered to the general public (public class schedules, 'all welcome', open enrollment, drop-in info). It must NOT be restricted to disabled/OPWDD individuals."
+      },
+      {
+        "id": "published-fees",
+        "label": "Class has published fees",
+        "criteria": "A concrete public price for the class must be visible on the site (e.g. '$30 per class', '10-class pack $250'). A 'contact us for pricing' page means the fee is NOT published."
+      },
+      {
+        "id": "fees-identical",
+        "label": "Fees are identical for OPWDD and non-OPWDD individuals",
+        "criteria": "Check whether the published pricing applies to everyone. If the site shows one public price list with no special disabled/OPWDD rate, this is supported. If a special/segregated price for disabled participants exists, this fails. If pricing is not published at all, mark Needs Review."
+      },
+      {
+        "id": "subject-based",
+        "label": "Class is subject-based (art, dance, martial arts, cooking, etc.)",
+        "criteria": "The class must teach a concrete subject or skill (art, dance, martial arts, cooking, riding, music...). Generic supervision or day-hab style programming does not count."
+      },
+      {
+        "id": "no-college-credits",
+        "label": "Class does not give college credits",
+        "criteria": "Confirm the class is non-credit. If the provider is a college/university, look for 'non-credit', 'continuing education', or absence of credit language. If credit-bearing, this fails."
+      },
+      {
+        "id": "not-clinical",
+        "label": "Class is not clinical/therapy in nature",
+        "criteria": "The class must be recreational/educational, not therapy. Words like 'therapy', 'treatment', 'clinical', 'licensed therapist' describing the service itself indicate failure. Note: 'therapeutic riding' style marketing needs care - if the offering reviewed is the recreational program, judge that program."
+      },
+      {
+        "id": "published-schedule",
+        "label": "A published schedule of the class exists",
+        "criteria": "Look for a class schedule/timetable (days, times, or session calendar) publicly visible on the site."
+      },
+      {
+        "id": "fee-match",
+        "label": "Published fee matches the fee stated on the form",
+        "type": "rate-comparison",
+        "criteria": "Compare the fee stated on the application to the fee published on the website. State both amounts. Verdict must be one of: matches application exactly / differs / not published."
+      }
+    ]
+  },
+  "findings": [
+    {
+      "id": "open-to-public",
+      "status": "Met",
+      "note": "The website explicitly states that recreational riding lessons are offered to the public for children and adults of all skill levels, and differentiates this program from therapeutic riding.",
+      "evidenceUrl": "https://gallopnyc.org/recreational-riding",
+      "quote": "However, we offer a limited number of riding lessons to the public. Our lessons are available for children and adults of all skill levels and experience.",
+      "label": "Class is open to and attended by the broader public",
+      "type": "web-check",
+      "quoteVerified": true,
+      "targetedScreenshot": "screenshots/evidence-open-to-public.png",
+      "targetedCapturedAt": "2026-07-15T13:12:23.950Z"
+    },
+    {
+      "id": "published-fees",
+      "status": "Met",
+      "note": "The website clearly lists prices for both private and group classes, including the 30-minute group session.",
+      "evidenceUrl": "https://gallopnyc.org/recreational-riding",
+      "quote": "Group Classes 30-Minute Group - $80",
+      "label": "Class has published fees",
+      "type": "web-check",
+      "quoteVerified": true,
+      "targetedScreenshot": "screenshots/evidence-published-fees.png",
+      "targetedCapturedAt": "2026-07-15T13:12:25.161Z"
+    },
+    {
+      "id": "fees-identical",
+      "status": "Met",
+      "note": "The website publishes a single set of rates for recreational riding lessons, and there is no indication of different pricing for OPWDD vs. non-OPWDD individuals for this specific program. The FAQ mentions OPWDD reimbursement, implying they can participate at the published rates.",
+      "evidenceUrl": "https://gallopnyc.org/recreational-riding",
+      "quote": "Group Classes 30-Minute Group - $80",
+      "label": "Fees are identical for OPWDD and non-OPWDD individuals",
+      "type": "web-check",
+      "quoteVerified": true,
+      "targetedScreenshot": "screenshots/evidence-fees-identical.png",
+      "targetedCapturedAt": "2026-07-15T13:12:26.243Z"
+    },
+    {
+      "id": "subject-based",
+      "status": "Met",
+      "note": "The program is described as 'Recreational Riding' and a 'horsemanship program,' indicating it teaches the skill of riding and horsemanship.",
+      "evidenceUrl": "https://gallopnyc.org/recreational-riding",
+      "quote": "Recreational Riding",
+      "label": "Class is subject-based (art, dance, martial arts, cooking, etc.)",
+      "type": "web-check",
+      "quoteVerified": true,
+      "targetedScreenshot": "screenshots/evidence-subject-based.png",
+      "targetedCapturedAt": "2026-07-15T13:12:27.302Z"
+    },
+    {
+      "id": "no-college-credits",
+      "status": "Met",
+      "note": "There is no mention of college credits or affiliation with a college/university on the provided pages. The program is described as a 'horsemanship program'.",
+      "evidenceUrl": "https://gallopnyc.org/recreational-riding",
+      "quote": "We're a structured, semester-based horsemanship program, not a drop-in stable.",
+      "label": "Class does not give college credits",
+      "type": "web-check",
+      "quoteVerified": true,
+      "targetedScreenshot": "screenshots/evidence-no-college-credits.png",
+      "targetedCapturedAt": "2026-07-15T13:12:28.569Z"
+    },
+    {
+      "id": "not-clinical",
+      "status": "Met",
+      "note": "The website explicitly differentiates 'Recreational Riding' from 'therapeutic riding programs,' stating that the recreational program is separate and does not involve PATH Intl. certified therapeutic riding instructors.",
+      "evidenceUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdiAP_zV_DWc3rn9sYULv_jWBq5P1S3yj4TB0K4JWjny6XHbw/viewform",
+      "quote": "IMPORTANT: This list is for recreational riding only and is separate from our therapeutic riding programs.",
+      "label": "Class is not clinical/therapy in nature",
+      "type": "web-check",
+      "quoteVerified": true,
+      "targetedScreenshot": "screenshots/evidence-not-clinical.png",
+      "targetedCapturedAt": "2026-07-15T13:12:34.981Z"
+    },
+    {
+      "id": "published-schedule",
+      "status": "Not Met",
+      "note": "The website states that riders join by the semester and there is a waitlist, but it does not provide a publicly visible schedule with specific days and times for recreational riding classes. It only asks for rider availability.",
+      "evidenceUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdiAP_zV_DWc3rn9sYULv_jWBq5P1S3yj4TB0K4JWjny6XHbw/viewform",
+      "quote": "Please use this form to join the wait list for the recreational riding program at GallopNYC.",
+      "label": "A published schedule of the class exists",
+      "type": "web-check",
+      "quoteVerified": true,
+      "targetedScreenshot": "screenshots/evidence-published-schedule.png",
+      "targetedCapturedAt": "2026-07-15T13:12:36.076Z"
+    },
+    {
+      "id": "fee-match",
+      "status": "Met",
+      "note": "The published fee of $80 for a 30-minute group session matches the fee stated on the application form.",
+      "evidenceUrl": "https://gallopnyc.org/recreational-riding",
+      "quote": "Group Classes 30-Minute Group - $80",
+      "label": "Published fee matches the fee stated on the form",
+      "type": "rate-comparison",
+      "quoteVerified": true,
+      "targetedScreenshot": "screenshots/evidence-fee-match.png",
+      "targetedCapturedAt": "2026-07-15T13:12:29.822Z"
+    }
+  ],
+  "rateComparison": {
+    "formRate": "$80 per 30-minute session",
+    "websiteRate": "$80 per 30-Minute Group",
+    "verdict": "matches application exactly",
+    "note": "The website lists a 30-minute group lesson for $80, which exactly matches the stated fee on the application form for a 30-minute session."
+  },
+  "internalItems": [
+    {
+      "question": "Are community classes currently approved in the budget?",
+      "formAnswer": "YES",
+      "websiteVerifiable": false
+    },
+    {
+      "question": "Does the class provide opportunity for community inclusion?",
+      "formAnswer": "YES",
+      "websiteVerifiable": false
+    },
+    {
+      "question": "Does the class accommodate the individual's health and/or safety needs?",
+      "formAnswer": "YES",
+      "websiteVerifiable": false
+    },
+    {
+      "question": "Does the class increase independence or substitute for human assistance?",
+      "formAnswer": "NO",
+      "websiteVerifiable": false
+    },
+    {
+      "question": "Is the class provided exclusively for the benefit of the participant?",
+      "formAnswer": "YES",
+      "websiteVerifiable": false
+    },
+    {
+      "question": "Is the class open to and attended by the broader public?",
+      "formAnswer": "YES",
+      "websiteVerifiable": true
+    },
+    {
+      "question": "Does the class have published fees? (attach link / advertised flyer)",
+      "formAnswer": "YES",
+      "websiteVerifiable": false
+    },
+    {
+      "question": "Are the fees identical for both OPWDD and non-OPWDD individuals?",
+      "formAnswer": "YES",
+      "websiteVerifiable": true
+    },
+    {
+      "question": "Is the class subject based? (Art, Dance, Martial Arts, Cooking)",
+      "formAnswer": "YES",
+      "websiteVerifiable": false
+    },
+    {
+      "question": "Does the class provide college credits?",
+      "formAnswer": "NO",
+      "websiteVerifiable": false
+    },
+    {
+      "question": "Is the class clinical in nature? (therapy)",
+      "formAnswer": "NO",
+      "websiteVerifiable": false
+    },
+    {
+      "question": "Is the class given in a setting accessed only by people with Developmental Disabilities?",
+      "formAnswer": "NO",
+      "websiteVerifiable": false
+    },
+    {
+      "question": "Is the class run by OPWDD or a provider-agency staff acting in their official capacities?",
+      "formAnswer": "NO",
+      "websiteVerifiable": false
+    },
+    {
+      "question": "Is the class located on grounds where OPWDD services are normally provided?",
+      "formAnswer": "NO",
+      "websiteVerifiable": false
+    },
+    {
+      "question": "Does the class duplicate any Medicaid state plan or HCBS waiver services (or entity that delivers such)?",
+      "formAnswer": "NO",
+      "websiteVerifiable": false
+    },
+    {
+      "question": "Does the class duplicate services given through Board of Education for school-aged children?",
+      "formAnswer": "NO",
+      "websiteVerifiable": false
+    },
+    {
+      "question": "Is there a published schedule of the class? (please attach)",
+      "formAnswer": "YES",
+      "websiteVerifiable": true
+    },
+    {
+      "question": "Is the class being reimbursed directly? (if yes, attach a W9)",
+      "formAnswer": "YES",
+      "websiteVerifiable": false
+    }
+  ],
+  "appealAssessment": "",
+  "pages": [
+    {
+      "url": "https://gallopnyc.org/recreational-riding",
+      "title": "Recreational Riding — GallopNYC",
+      "screenshot": "screenshots/page-1-fullpage.png",
+      "capturedAt": "2026-07-15T13:11:05.675Z",
+      "blocked": false
+    },
+    {
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdiAP_zV_DWc3rn9sYULv_jWBq5P1S3yj4TB0K4JWjny6XHbw/viewform",
+      "title": "GallopNYC Prospective Recreational Rider Form",
+      "screenshot": "screenshots/page-2-fullpage.png",
+      "capturedAt": "2026-07-15T13:11:17.997Z",
+      "blocked": true
+    },
+    {
+      "url": "https://gallopnyc.org/programs",
+      "title": "programs | Explore Our Equine Programs — GallopNYC",
+      "screenshot": "screenshots/page-3-fullpage.png",
+      "capturedAt": "2026-07-15T13:11:22.392Z",
+      "blocked": false
+    },
+    {
+      "url": "https://gallopnyc.org/faq",
+      "title": "General 1 — GallopNYC",
+      "screenshot": "screenshots/page-4-fullpage.png",
+      "capturedAt": "2026-07-15T13:11:42.201Z",
+      "blocked": false
+    }
+  ],
+  "pageTexts": [
+    {
+      "url": "https://gallopnyc.org/recreational-riding",
+      "text": "/*Do not Adjust below this line*/\n\nNew to GallopNYC? We're a structured, semester-based horsemanship program, not a drop-in stable. Learn about enrolling →\n\nSkip to Content\nAbout\nPrograms\nDonate\nGala\nVolunteer\nJobs\nContact Us\nShop\nDonate Today!\nRecreational Riding\n\nGallopNYC is primarily dedicated to offering those with disabilities access to therapeutic riding lessons. However, we offer a limited number of riding lessons to the public. Our lessons are available for children and adults of all skill levels and experience.  \n\nRevenue from our recreational riding lessons is used to support tuition scholarships for our therapeutic riding students, ensuring that those facing financial barriers can take part in our program.  \n\nSign Up for Recreational Riding\nGallopNYC Sunrise Stables\n\nGallopNYC’s Sunrise Stables is an outdoor horseback riding facility with a large riding arena, stables, grazing paddocks and a round pen. We offer limited public riding lessons, including private and group lessons, and events as part of our horse education programs. \n\nPricing \n\nPrivate Classes\n\n30-Minute Private - $100\n\n45-Minute Private - $125\n\n60-Minute Private - $150\n\nFor additional information, please email us at info@gallopnyc.org.\n\nSign Up\n\nGroup Classes\n\n30-Minute Group - $80\n\n45-Minute Group - $100\n\n60-Minute Group - $125\n\nBack to Programs\nSign Up for Our Newsletter!\n\nGallopNYC is a 501(c)(3) nonprofit organization and donations are tax-deductible within the limits of the tax code. Our EIN is 05-0615968.\n\nOur full legal name is: Giving Alternative Learners Uplifting Opportunities Inc, d/b/a GallopNYC.\n\nReport Accessibility Issue\n\nCopyright 2026 - GallopNYC\n\nAbout\n\nPrograms\n\nVolunteer\n\nLocations\n\nFAQ\n\nFinancials\n\nDonate\n\nEvents\n\nNews\n\nContact\n\nJobs\n\nPartners\n\nSports Protection Policy\n\nResearch\n\nSite Map\n\nPrivacy Policy\n\nLegal\n\nPhoto Credits\n\nDesigned by EQ MEDIA"
+    },
+    {
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdiAP_zV_DWc3rn9sYULv_jWBq5P1S3yj4TB0K4JWjny6XHbw/viewform",
+      "text": "GallopNYC Prospective Recreational Rider Form\nPlease use this form to join the wait list for the recreational riding program at GallopNYC.\n\nLessons are usually 30-minute group sessions for adults and children 6 years and older.\n\nIMPORTANT: This list is for recreational riding only and is separate from our therapeutic riding programs. If you or your child has a diagnosis of a disability of any kind, therapeutic riding may be a better fit for you since the instructors are PATH Intl. certified and experienced at adapting to all different kinds of abilities. The main difference between rec riding and therapeutic riding is instructor certification and support from volunteers - otherwise there are lessons available at all levels for both rec and therapeutic riding.\n\nSign in to Google to save your progress. Learn more\n* Indicates required question\nEmail\n*\nYour email address\nFirst Name\n*\nYour answer\nLast Name\n*\nYour answer\nPhone Number\n*\nYour answer\nAre you signing up for recreational riding for yourself or someone else?\n*\nMyself- I would like to sign up for recreational riding lessons\nMy child- I would like to sign my child up for recreational riding lessons. Children must be 6 years old or older to start recreational lessons with us.\nSomeone else\nIf you are signing your child up, please list their full name:\nYour answer\nIf you are signing your child up, please list their age:\nYour answer\nWhat is your/your child's level of horse experience?\n*\nNo or little experience - Beginner\nHave had a few lessons, can walk/trot - Intermediate\nCan walk/trot/canter - Advanced\nAvailability (Check all that apply)\n*\nWeekday mornings\nWeekday evenings\nWeekends\nAny additional information?\nYour answer\nSend me a copy of my responses.\nSubmit\nClear form\nNever submit passwords through Google Forms.\nreCAPTCHA\nPrivacy\nTerms\nThis form was created inside GallopNYC.\n\nDoes this form look suspicious? Report\n\n Forms\n \nHelp and feedback"
+    },
+    {
+      "url": "https://gallopnyc.org/programs",
+      "text": "/*Do not Adjust below this line*/\n\nNew to GallopNYC? We're a structured, semester-based horsemanship program, not a drop-in stable. Learn about enrolling →\n\nSkip to Content\nAbout\nPrograms\nDonate\nGala\nVolunteer\nJobs\nContact Us\nShop\nDonate Today!\nPrograms\n\nFounded in 2005, GallopNYC is New York City’s largest therapeutic equine-assisted services provider. Each week, we serve over 450 individuals—people with disabilities, veterans, and seniors—through riding, hippotherapy, and unmounted programs. Our work transforms lives through the power of horses.\n\nPlease note: Many of our programs have limited availability and operate with a waitlist.\nEarly registration is encouraged. \nRiders join GallopNYC by the semester rather than booking single sessions, so they can build real skills over time.\n\nTherapeutic Riding\n\nThe therapeutic horsemanship programs at GallopNYC provide measurable benefits for people with developmental, emotional, social and physical disabilities. Through weekly riding sessions with PATH Intl. Certified Therapeutic Riding Instructors, we teach new skills, inspiring each rider to live life as fully, productively and independently as possible.\n\nLearn More\nVeterans\n\nGallopNYC provides two, free unique equine programs for veterans. Riding for Veterans and Groundwork for Veterans. Veterans will have the opportunity to grow their confidence from learning to be in charge of a large herd animal, exercise their leadership skills by exploring alternative approaches to giving commands and demonstrate their competence by learning new skills.\n\nLearn More\nSummer Camp\n\nGallopNYC welcomes young equestrians to Summer Camp—a fun and enriching week-long program designed for riders of all levels. Campers will enjoy daily horseback riding, hands-on horse care, and a variety of engaging outdoor activities that foster confidence, independence and connection with animals and nature.\n\nLearn More\nOther Ways to Participate\n\nSeniors - Silver Saddles\n\nRecreational Riding\n\nJob Skills Program\n\nPony Club\n\nSign Up for Our Newsletter!\n\nGallopNYC is a 501(c)(3) nonprofit organization and donations are tax-deductible within the limits of the tax code. Our EIN is 05-0615968.\n\nOur full legal name is: Giving Alternative Learners Uplifting Opportunities Inc, d/b/a GallopNYC.\n\nReport Accessibility Issue\n\nCopyright 2026 - GallopNYC\n\nAbout\n\nPrograms\n\nVolunteer\n\nLocations\n\nFAQ\n\nFinancials\n\nDonate\n\nEvents\n\nNews\n\nContact\n\nJobs\n\nPartners\n\nSports Protection Policy\n\nResearch\n\nSite Map\n\nPrivacy Policy\n\nLegal\n\nPhoto Credits\n\nDesigned by EQ MEDIA"
+    },
+    {
+      "url": "https://gallopnyc.org/faq",
+      "text": "/*Do not Adjust below this line*/\n\nNew to GallopNYC? We're a structured, semester-based horsemanship program, not a drop-in stable. Learn about enrolling →\n\nSkip to Content\nAbout\nPrograms\nDonate\nGala\nVolunteer\nJobs\nContact Us\nShop\nDonate Today!\nFrequently Asked Questions\n\nCan I book a drop-in or one-time ride?\n\nGallopNYC is a structured horsemanship program, not a drop-in stable, so we don't offer one-time recreational rides. Our riders join by the semester and build skills over time alongside our horses and instructors.\n\nIf you or someone in your family might benefit from our programs, we'd love to tell you more. Email info@gallopnyc.org to learn about enrolling.\n\nWhat is your payment and cancellation policy? \n\nPayment in full is required to secure your place on the schedule. You may choose the installment plan, which, with complete documentation, will also secure your place on the schedule.\n\nYou must provide credit card information that will be held by our secure third-party processor. Your credit card will be automatically charged each week of lessons\n\nMissed or rider-canceled lessons are non-refundable.\n\nLessons missed or canceled by the rider cannot be rescheduled.\n\nFamilies are financially responsible for the full term, even if a rider cancels or withdraws.\n\nRiders may not participate until payment is received.\n\nOPWDD and Self-Direction\n\nGallopNYC can no longer accept direct deposits from OPWDD or Self-Direction agencies.\n\nItemized monthly invoices will be provided for reimbursement requests. Please ensure your\n\nagency is aware of this process.\n\nAre refunds available? \n\nThere are no refunds for classes you miss. Classes are not transferable.\n\nGallopNYC will issue refunds for any lessons we cancel that could not be rescheduled, at the end of the term. \n\nWeekend make-ups are not available due to high demand.\n\nWhat happens if the weather is bad? \n\nBecause lessons take place outdoors, cancellations may occur.\n\n• Families will be notified at least two hours in advance.\n\n• If weather conditions change while you are en route, an unmounted horsemanship lesson will be offered.\n\nWhat are the weather cancellation policies?\n\nFamilies will be notified at least two hours in advance.\n\n• If weather conditions change while you are en route, an unmounted horsemanship lesson will be offered.\n\nWinter Weather Attendance Guidelines\n\n37°F and above: Lessons proceed.\n\n36°F and below: Lessons are canceled at no charge.\n\nSnow, sleet, travel advisories, or NYC school closures: Lessons are canceled at no charge.\n\nSummer Weather Attendance Guidelines\n\nIn very hot weather, we offer unmounted horsemanship classes.\n\nWhen temperatures exceed 90 degrees and humidity exceeds 60 percent, lessons are canceled.\n\nWhat should I wear? \n\nTo ensure safety and comfort:\n\nLong pants are required.\n\nClosed-toe shoes with a low heel (paddock boots or similar are ideal).\n\nA certified equestrian helmet is required. Helmets are available onsite at no cost.\n\nIs there a weight limit?\n\nTo protect both riders and horses:\n\nMaximum weight for balanced, independent riders: 180 pounds.\n\nMaximum weight for riders requiring significant physical support: 150 pounds.\n\nIf a rider exceeds these limits, we offer an engaging unmounted horsemanship program as an alternative.\n\nGallopNYC has a limited number of horses who can safely carry higher weight ranges. For this reason, participation is based on horse availability and suitability.\n\nWhat are your rates? \t\n\n30-Minute Group Lesson    $80\t\n\n30-Minute Private Lesson  $100\n\n45-Minute Group Lesson    $100\n\n45-Minute Private Lesson   $125\n\n60-Minute Group Lesson.    $125\t\n\n60-Minute Private Lesson  $150\t\n\nEffective:  Janurary 2026\nWhat are possible reasons for participant discharge?\n\nGallopNYC may discontinue participation if any of the following occur:\n\nExcessive absences that disrupt progress or limit access for others.\n\nDifficulty following directions that prevents safe or productive participation.\n\nRider weight exceeds what can be safely supported by available horses, staff, or volunteers.\n\nInability to maintain essential head or neck control, creating a safety concern.\n\nA change in medical, physical, cognitive, or emotional status that makes therapeutic riding unsafe or inappropriate.\n\nUnsafe, uncontrolled, or inappropriate behavior that creates risk for the rider, other participants, staff, volunteers, or horses.\n\n‍\t\t\t‍\n\nFAQs\nSign Up for Our Newsletter!\n\nGallopNYC is a 501(c)(3) nonprofit organization and donations are tax-deductible within the limits of the tax code. Our EIN is 05-0615968.\n\nOur full legal name is: Giving Alternative Learners Uplifting Opportunities Inc, d/b/a GallopNYC.\n\nReport Accessibility Issue\n\nCopyright 2026 - GallopNYC\n\nAbout\n\nPrograms\n\nVolunteer\n\nLocations\n\nFAQ\n\nFinancials\n\nDonate\n\nEvents\n\nNews\n\nContact\n\nJobs\n\nPartners\n\nSports Protection Policy\n\nResearch\n\nSite Map\n\nPrivacy Policy\n\nLegal\n\nPhoto Credits\n\nDesigned by EQ MEDIA"
+    }
+  ],
+  "reviewerNotes": [],
+  "meta": {
+    "reviewDate": "2026-07-15 13:12:37 UTC",
+    "model": "gemini-2.5-flash",
+    "sourceFile": "Sample-01---Community-Class-GallopNYC.pdf",
+    "toolVersion": "1.0.0"
+  },
+  "needsClarification": false
+}

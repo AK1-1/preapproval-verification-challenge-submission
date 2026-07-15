@@ -1,0 +1,254 @@
+{
+  "_readme": "Config-driven checklist knowledge base. Each category defines the WEBSITE-VERIFIABLE checks the tool runs. Any YES/NO question found on a form that is not covered by a webCheck is automatically classified 'Internal - not website-verifiable' and left for the human reviewer. To add a new form category, add an entry here - no code changes needed. See README 'Adding a new form or checklist'.",
+  "version": 1,
+  "categories": {
+    "community-class": {
+      "label": "Community Classes",
+      "detectHints": ["Community Class Pre-approval Checklist", "community class"],
+      "rateFieldLabel": "Fee per Session",
+      "capNotes": [
+        "Invoice guideline: >2 sessions/day (up to 60 min each) or >7 sessions/week at one provider requires prior approval."
+      ],
+      "webChecks": [
+        {
+          "id": "open-to-public",
+          "label": "Class is open to and attended by the broader public",
+          "criteria": "Look for evidence that the class is offered to the general public (public class schedules, 'all welcome', open enrollment, drop-in info). It must NOT be restricted to disabled/OPWDD individuals."
+        },
+        {
+          "id": "published-fees",
+          "label": "Class has published fees",
+          "criteria": "A concrete public price for the class must be visible on the site (e.g. '$30 per class', '10-class pack $250'). A 'contact us for pricing' page means the fee is NOT published."
+        },
+        {
+          "id": "fees-identical",
+          "label": "Fees are identical for OPWDD and non-OPWDD individuals",
+          "criteria": "Check whether the published pricing applies to everyone. If the site shows one public price list with no special disabled/OPWDD rate, this is supported. If a special/segregated price for disabled participants exists, this fails. If pricing is not published at all, mark Needs Review."
+        },
+        {
+          "id": "subject-based",
+          "label": "Class is subject-based (art, dance, martial arts, cooking, etc.)",
+          "criteria": "The class must teach a concrete subject or skill (art, dance, martial arts, cooking, riding, music...). Generic supervision or day-hab style programming does not count."
+        },
+        {
+          "id": "no-college-credits",
+          "label": "Class does not give college credits",
+          "criteria": "Confirm the class is non-credit. If the provider is a college/university, look for 'non-credit', 'continuing education', or absence of credit language. If credit-bearing, this fails."
+        },
+        {
+          "id": "not-clinical",
+          "label": "Class is not clinical/therapy in nature",
+          "criteria": "The class must be recreational/educational, not therapy. Words like 'therapy', 'treatment', 'clinical', 'licensed therapist' describing the service itself indicate failure. Note: 'therapeutic riding' style marketing needs care - if the offering reviewed is the recreational program, judge that program."
+        },
+        {
+          "id": "published-schedule",
+          "label": "A published schedule of the class exists",
+          "criteria": "Look for a class schedule/timetable (days, times, or session calendar) publicly visible on the site."
+        },
+        {
+          "id": "fee-match",
+          "label": "Published fee matches the fee stated on the form",
+          "type": "rate-comparison",
+          "criteria": "Compare the fee stated on the application to the fee published on the website. State both amounts. Verdict must be one of: matches application exactly / differs / not published."
+        }
+      ]
+    },
+    "coaching": {
+      "label": "Coaching (for Parents/Spouse)",
+      "detectHints": ["Coaching Preapproval", "coaching"],
+      "rateFieldLabel": "Fee per Course",
+      "caps": {
+        "groupClassPerSession": 55,
+        "privateClassPerSession": 111,
+        "programPerYear": 500
+      },
+      "capNotes": [
+        "Fee sanity-check: <= $55 per group class / <= $111 per private class; program capped at $500/year."
+      ],
+      "webChecks": [
+        {
+          "id": "published-fees",
+          "label": "Published fees exist for the course/class",
+          "criteria": "A concrete public price for the course/class must be visible on the site."
+        },
+        {
+          "id": "fee-within-caps",
+          "label": "Stated fee is within program caps ($55 group / $111 private, $500/year)",
+          "type": "cap-check",
+          "criteria": "Compare the fee stated on the form (and the published fee if found) against the caps: $55 per group class, $111 per private class, $500 per year program cap. Flag any amount exceeding a cap."
+        },
+        {
+          "id": "educational-content",
+          "label": "Content is a genuine educational/coaching opportunity",
+          "criteria": "The offering must be an educational course/coaching (parenting class, family workshop...). Lodging/travel/retreat packages are excluded and fail this check."
+        },
+        {
+          "id": "fee-match",
+          "label": "Published fee matches the fee stated on the form",
+          "type": "rate-comparison",
+          "criteria": "Compare the fee on the application to the published fee. Verdict: matches application exactly / differs / not published."
+        }
+      ]
+    },
+    "membership": {
+      "label": "Health-Club / Organizational Membership",
+      "detectHints": ["Membership", "memberships preapproval"],
+      "rateFieldLabel": "Membership Fee",
+      "webChecks": [
+        {
+          "id": "open-to-public",
+          "label": "Organization is open to the public (not private/invitation-only)",
+          "criteria": "Anyone from the general public must be able to join (public 'join'/'sign up' flow, published membership tiers). Private or invitation-only clubs fail."
+        },
+        {
+          "id": "published-fee",
+          "label": "Membership fee is published",
+          "criteria": "A concrete membership price (monthly or yearly) must be publicly visible."
+        },
+        {
+          "id": "fee-match",
+          "label": "Published membership fee matches the form (yearly/monthly)",
+          "type": "rate-comparison",
+          "criteria": "Compare the membership fee on the application against the published amount, being careful about monthly vs yearly. Verdict: matches application exactly / differs / not published."
+        }
+      ]
+    },
+    "hri": {
+      "label": "Household Related Items (HRI)",
+      "detectHints": ["Household Related Items", "HRI"],
+      "rateFieldLabel": "Item price",
+      "caps": {
+        "perBudgetYear": 1500,
+        "approvalValidMonths": 3
+      },
+      "capNotes": [
+        "Capped at $1,500 per budget year; approval valid 3 months.",
+        "Adults only (18+)."
+      ],
+      "exclusionList": [
+        "Academic Tutoring",
+        "Automatic Pill Dispenser/Medication System",
+        "Cell Phones/Telephones",
+        "Computer Hardware",
+        "Computer Programs/Software",
+        "Leased & Purchased Vehicles",
+        "Health-Related Services/Equipment/Supplies",
+        "Parent/Participant/Staff Activity Fees, Expenses & Meals",
+        "Personal Monitoring Systems",
+        "Direct Clinician services & therapies (OT, PT, Speech, Psychology) and experimental therapies"
+      ],
+      "webChecks": [
+        {
+          "id": "item-exists-with-price",
+          "label": "The item exists at the linked page, with a visible price",
+          "criteria": "The linked product page must show the requested item with a concrete visible price."
+        },
+        {
+          "id": "not-excluded",
+          "label": "Item is plausibly NOT on the IDGS/HRI exclusion list",
+          "type": "exclusion-check",
+          "criteria": "Judge the item against the exclusion list. A laptop/desktop/tablet is 'Computer Hardware' and MUST be flagged Not Met. When in doubt, Needs Review."
+        },
+        {
+          "id": "safety-features",
+          "label": "Safety features described on the form are supported by the product page",
+          "criteria": "If the form describes safety features, verify the product page supports them. If the form lists no safety features (N/A), mark Needs Review with a note that no safety features were claimed."
+        },
+        {
+          "id": "price-within-cap",
+          "label": "Item price is within the $1,500/budget-year cap",
+          "type": "cap-check",
+          "criteria": "Compare the visible product price against the $1,500 per budget year cap."
+        }
+      ]
+    },
+    "otps": {
+      "label": "OTPS (Other Than Personal Services)",
+      "detectHints": ["OTPS", "Other Than Personal Services"],
+      "rateFieldLabel": "Item price",
+      "caps": {
+        "perBudgetYear": 3000
+      },
+      "capNotes": ["Capped at $3,000 per budget year."],
+      "exclusionList": [
+        "Cable TV",
+        "Common household supplies",
+        "Rental cars",
+        "Legal fees",
+        "Co-pays",
+        "Experimental therapies"
+      ],
+      "webChecks": [
+        {
+          "id": "item-exists-with-price",
+          "label": "The item exists at the linked page, with a visible price",
+          "criteria": "The linked product page must show the requested item with a concrete visible price."
+        },
+        {
+          "id": "not-excluded",
+          "label": "Item is plausibly NOT on the OTPS exclusion list",
+          "type": "exclusion-check",
+          "criteria": "Judge the item against the OTPS exclusion list. When in doubt, Needs Review."
+        },
+        {
+          "id": "price-within-cap",
+          "label": "Item price is within the $3,000/budget-year cap",
+          "type": "cap-check",
+          "criteria": "Compare the visible product price against the $3,000 per budget year cap."
+        }
+      ]
+    },
+    "transition-program": {
+      "label": "Transition Program",
+      "detectHints": ["Transition Program"],
+      "rateFieldLabel": "Fee per Course",
+      "caps": {
+        "perCourse": 350,
+        "perMonth": 800
+      },
+      "capNotes": ["Fee sanity-check: <= $350 per course / <= $800 per month."],
+      "webChecks": [
+        {
+          "id": "published-fees",
+          "label": "Published fees exist",
+          "criteria": "Concrete public pricing for the program/courses must be visible."
+        },
+        {
+          "id": "fee-within-caps",
+          "label": "Fees are within caps ($350/course, $800/month)",
+          "type": "cap-check",
+          "criteria": "Compare stated and published fees against the caps: $350 per course / $800 per month."
+        },
+        {
+          "id": "noncredit-skill-building",
+          "label": "Program is noncredit-bearing and oriented to skill-building / employment outcomes",
+          "criteria": "Look for 'non-credit', 'continuing education', 'workforce', 'job readiness', 'career skills' framing. Credit-bearing degree programs fail."
+        },
+        {
+          "id": "not-opwdd-certified-location",
+          "label": "Program is not in an OPWDD-certified location",
+          "criteria": "Check the venue: a community college or ordinary community venue is fine. If the program is delivered at an OPWDD-certified/provider-agency site, it fails. If the website does not say, mark Needs Review - do not guess."
+        },
+        {
+          "id": "staff-screening-document",
+          "label": "Staff background-screening (needs document, not website)",
+          "type": "needs-document",
+          "criteria": "This is proven by a letter from the provider, not the website. Always mark Needs Review with the note 'needs document: background-screening letter'."
+        },
+        {
+          "id": "fee-match",
+          "label": "Published fee matches the fee stated on the form",
+          "type": "rate-comparison",
+          "criteria": "Compare the fee on the application to the published fee. Verdict: matches application exactly / differs / not published."
+        }
+      ]
+    },
+    "appeal": {
+      "label": "Pre-Approval Appeal (Community Class)",
+      "detectHints": ["Pre-Approval Appeals Form", "Appeal"],
+      "extends": "community-class",
+      "appeal": true,
+      "appealInstructions": "This is an APPEAL of a previous denial. Re-run every Community Classes website check, but frame the whole review against the stated denial reason. For each check, and especially any check related to the denial reason, explicitly state whether the website evidence SUPPORTS or REFUTES the denial reason. Evidence the appellant says exists offline (e.g. a rate sheet obtained from the gym) cannot be verified from the website - acknowledge it in notes but do not count it as website evidence."
+    }
+  }
+}
