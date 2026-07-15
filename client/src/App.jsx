@@ -313,11 +313,12 @@ function ChatSidebar({ reportId, onReportChanged, onRunStarted }) {
   ]);
   const [input, setInput] = useState("");
   const [busy, setBusy] = useState(false);
+  const [pending, setPending] = useState(null); // proposed actions awaiting explicit confirmation
   const logRef = useRef();
 
   useEffect(() => {
     logRef.current?.scrollTo(0, logRef.current.scrollHeight);
-  }, [messages]);
+  }, [messages, pending]);
 
   const send = async () => {
     const text = input.trim();
@@ -332,13 +333,42 @@ function ChatSidebar({ reportId, onReportChanged, onRunStarted }) {
         body: JSON.stringify({ reportId, message: text }),
       });
       setMessages((m) => [...m, { role: "tool", text: res.reply }]);
-      if (res.rerunJobId) onRunStarted(res.rerunJobId);
-      else if ((res.applied || []).length) onReportChanged();
+      // Nothing is applied yet — the report only changes after the reviewer
+      // confirms the proposed actions below.
+      setPending((res.proposedActions || []).length ? res.proposedActions : null);
     } catch (e) {
       setMessages((m) => [...m, { role: "tool", text: `Error: ${e.message}` }]);
     } finally {
       setBusy(false);
     }
+  };
+
+  const confirmPending = async () => {
+    if (!pending || busy) return;
+    setBusy(true);
+    try {
+      const res = await api("/api/chat/apply", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ reportId, actions: pending }),
+      });
+      setPending(null);
+      setMessages((m) => [
+        ...m,
+        { role: "tool", text: res.applied?.length ? `Applied:\n• ${res.applied.join("\n• ")}` : "Nothing was applicable to apply." },
+      ]);
+      if (res.rerunJobId) onRunStarted(res.rerunJobId);
+      else if ((res.applied || []).length) onReportChanged();
+    } catch (e) {
+      setMessages((m) => [...m, { role: "tool", text: `Error applying changes: ${e.message}` }]);
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  const dismissPending = () => {
+    setPending(null);
+    setMessages((m) => [...m, { role: "tool", text: "Proposed changes discarded — the report was not modified." }]);
   };
 
   return (
@@ -351,6 +381,24 @@ function ChatSidebar({ reportId, onReportChanged, onRunStarted }) {
           </div>
         ))}
         {busy && <div className="msg tool">…</div>}
+        {pending && (
+          <div className="msg tool pendingbox">
+            <strong>Proposed changes — confirm to apply:</strong>
+            <ul>
+              {pending.map((a, i) => (
+                <li key={i}>{a.description}</li>
+              ))}
+            </ul>
+            <div>
+              <button className="primary" onClick={confirmPending} disabled={busy}>
+                Apply changes
+              </button>
+              <button onClick={dismissPending} disabled={busy}>
+                Discard
+              </button>
+            </div>
+          </div>
+        )}
       </div>
       <div className="chatinput">
         <textarea

@@ -129,6 +129,9 @@ img.evidence { max-width: 100%; border-radius: 6px; border: 1px solid var(--pane
 .msg { padding: 8px 12px; border-radius: 10px; font-size: 13px; max-width: 95%; }
 .msg.user { background: var(--accent); color: #0a1020; align-self: flex-end; }
 .msg.tool { background: rgba(255, 255, 255, 0.09); align-self: flex-start; }
+.msg.pendingbox { border: 1px solid var(--review); background: rgba(233, 168, 32, 0.12); max-width: 100%; }
+.msg.pendingbox ul { margin: 8px 0; padding-left: 18px; }
+.msg.pendingbox button { margin: 4px 8px 0 0; }
 .chatinput { display: flex; gap: 8px; margin-top: 10px; }
 .chatinput textarea {
   flex: 1; resize: none; background: rgba(0, 0, 0, 0.3); color: var(--text);

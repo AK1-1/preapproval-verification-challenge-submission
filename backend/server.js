@@ -6,7 +6,7 @@ import fs from "fs";
 import dotenv from "dotenv";
 import { runPipeline, reportIdForFile } from "./pipeline.js";
 import { generateReport, loadReport } from "./reportGenerator.js";
-import { handleChat } from "./chatAgent.js";
+import { proposeChat, applyActions } from "./chatAgent.js";
 import { ROOT, REPORTS_DIR, SAMPLES_DIR, UPLOADS_DIR, loadChecklists } from "./lib/config.js";
 
 dotenv.config();
@@ -113,13 +113,29 @@ app.get("/api/jobs/:id", (req, res) => {
   res.json(job);
 });
 
+// Chat is two-phase: /api/chat only PROPOSES actions (never modifies the
+// report); /api/chat/apply executes them after the reviewer confirms in the
+// UI, with server-side re-validation.
 app.post("/api/chat", async (req, res) => {
   const { reportId, message } = req.body || {};
   if (!reportId || !message) return res.status(400).json({ error: "reportId and message are required" });
   const dir = path.join(REPORTS_DIR, path.basename(reportId));
   if (!fs.existsSync(path.join(dir, "report.json"))) return res.status(404).json({ error: "report not found" });
   try {
-    const result = await handleChat(dir, message, { startJob });
+    const result = await proposeChat(dir, String(message).slice(0, 4000));
+    res.json(result);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.post("/api/chat/apply", (req, res) => {
+  const { reportId, actions } = req.body || {};
+  if (!reportId || !Array.isArray(actions)) return res.status(400).json({ error: "reportId and actions[] are required" });
+  const dir = path.join(REPORTS_DIR, path.basename(reportId));
+  if (!fs.existsSync(path.join(dir, "report.json"))) return res.status(404).json({ error: "report not found" });
+  try {
+    const result = applyActions(dir, actions, { startJob });
     res.json(result);
   } catch (err) {
     res.status(500).json({ error: err.message });
