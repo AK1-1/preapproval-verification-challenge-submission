@@ -100,7 +100,7 @@
     {
       "id": "item-exists-with-price",
       "status": "Needs Review",
-      "note": "No page text was captured, so the item's existence and price could not be verified.",
+      "note": "No page text was captured, so the existence and price of the item could not be verified.",
       "evidenceUrl": "",
       "quote": "",
       "label": "The item exists at the linked page, with a visible price",
@@ -109,7 +109,7 @@
     {
       "id": "not-excluded",
       "status": "Met",
-      "note": "The requested item, 'Weighted blanket (therapeutic)', is not on the OTPS exclusion list.",
+      "note": "The requested item, 'Weighted blanket (therapeutic)', is not found on the OTPS exclusion list.",
       "evidenceUrl": "",
       "quote": "",
       "label": "Item is plausibly NOT on the OTPS exclusion list",
@@ -118,7 +118,7 @@
     {
       "id": "price-within-cap",
       "status": "Needs Review",
-      "note": "No page text was captured, so the item's price could not be verified against the $3,000 cap.",
+      "note": "No page text was captured, so the item price could not be verified against the $3,000 cap.",
       "evidenceUrl": "",
       "quote": "",
       "label": "Item price is within the $3,000/budget-year cap",
@@ -179,7 +179,7 @@
       "url": "https://www.amazon.com/dp/B075YQXZLK",
       "title": "Page Not Found",
       "screenshot": "screenshots/page-1-fullpage.png",
-      "capturedAt": "2026-07-15T17:37:50.221Z",
+      "capturedAt": "2026-07-15T18:24:39.381Z",
       "blocked": true
     }
   ],
@@ -191,7 +191,7 @@
   ],
   "reviewerNotes": [],
   "meta": {
-    "reviewDate": "2026-07-15 17:37:55 UTC",
+    "reviewDate": "2026-07-15 18:24:44 UTC",
     "model": "gemini-2.5-flash",
     "sourceFile": "Sample-08---OTPS-Weighted-Blanket.pdf",
     "toolVersion": "1.0.0"

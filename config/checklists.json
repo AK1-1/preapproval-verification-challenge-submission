@@ -147,7 +147,7 @@
           "id": "not-excluded",
           "label": "Item is plausibly NOT on the IDGS/HRI exclusion list",
           "type": "exclusion-check",
-          "criteria": "Judge the item against the exclusion list. A laptop/desktop/tablet is 'Computer Hardware' and MUST be flagged Not Met. When in doubt, Needs Review."
+          "criteria": "Judge the item against the exclusion list. A laptop/desktop/tablet is 'Computer Hardware' and MUST be flagged Not Met. IMPORTANT: home-safety and accessibility hardware (grab bars, shower seats, ramps, bed rails, non-slip equipment) is the CORE PURPOSE of HRI and is NOT excluded - the 'Health-Related Services/Equipment/Supplies' entry refers to clinical/medical devices, therapies, and medical supplies, not home-safety modifications. When genuinely in doubt, Needs Review."
         },
         {
           "id": "safety-features",

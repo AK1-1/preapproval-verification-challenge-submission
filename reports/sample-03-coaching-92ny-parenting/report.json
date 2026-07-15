@@ -83,7 +83,7 @@
     {
       "id": "published-fees",
       "status": "Needs Review",
-      "note": "No fees could be found as the page for the 92NY Parenting & Family Center returned a 404 error.",
+      "note": "The page returned a 404 error, so no published fees could be found.",
       "evidenceUrl": "https://www.92ny.org/parenting-and-family",
       "quote": "",
       "label": "Published fees exist for the course/class",
@@ -92,7 +92,7 @@
     {
       "id": "fee-within-caps",
       "status": "Needs Review",
-      "note": "The stated fees on the form ($50 per class, $400 per course) are within the program caps ($55 per group class, $111 per private class, $500 per year program cap). [Auto-downgraded to Needs Review: the supporting quote could not be verified verbatim in the captured page text.]",
+      "note": "The stated fees on the form ($50 per class, $400 per course) are within the program caps ($55 per group class, $500 per year program cap). [Auto-downgraded to Needs Review: the supporting quote could not be verified verbatim in the captured page text.]",
       "evidenceUrl": "",
       "quote": "Fee per Class: $50, Fee per Course: $400",
       "label": "Stated fee is within program caps ($55 group / $111 private, $500/year)",
@@ -103,7 +103,7 @@
     {
       "id": "educational-content",
       "status": "Needs Review",
-      "note": "The requested item, 'Coaching (for Parents/Spouse)', is a genuine educational/coaching opportunity. [Auto-downgraded to Needs Review: the supporting quote could not be verified verbatim in the captured page text.]",
+      "note": "The requested service, 'Coaching (for Parents/Spouse)', is a genuine educational/coaching opportunity and not an excluded item. [Auto-downgraded to Needs Review: the supporting quote could not be verified verbatim in the captured page text.]",
       "evidenceUrl": "",
       "quote": "",
       "label": "Content is a genuine educational/coaching opportunity",
@@ -114,7 +114,7 @@
     {
       "id": "fee-match",
       "status": "Needs Review",
-      "note": "No published fees could be found on the website to compare with the stated form fees, as the page returned a 404 error.",
+      "note": "The page returned a 404 error, so no published fees could be found to compare with the stated form fees.",
       "evidenceUrl": "https://www.92ny.org/parenting-and-family",
       "quote": "",
       "label": "Published fee matches the fee stated on the form",
@@ -125,7 +125,7 @@
     "formRate": "Fee per Class: $50, Fee per Course: $400",
     "websiteRate": "not published",
     "verdict": "not published",
-    "note": "The website page for the Parenting & Family Center returned a 404 error, so no rates could be found to compare with the application."
+    "note": "The website returned a 404 error, so no rates could be found to compare with the application."
   },
   "internalItems": [
     {
@@ -155,14 +155,14 @@
       "url": "https://www.92ny.org/parenting-and-family",
       "title": "404 | 92NY",
       "screenshot": "screenshots/page-1-fullpage.png",
-      "capturedAt": "2026-07-15T17:37:10.503Z",
+      "capturedAt": "2026-07-15T18:26:51.332Z",
       "blocked": false
     },
     {
       "url": "https://my.92ny.org/components/sharedsession?actionUrl=https%3a%2f%2fwww.92ny.org%2ftnew%2freceive&returnUrl=https%3a%2f%2fwww.92ny.org%2fchildren-family%2fparenting-center",
       "title": "",
       "screenshot": "screenshots/page-2-fullpage.png",
-      "capturedAt": "2026-07-15T17:37:19.220Z",
+      "capturedAt": "2026-07-15T18:26:59.693Z",
       "blocked": true
     }
   ],
@@ -178,7 +178,7 @@
   ],
   "reviewerNotes": [],
   "meta": {
-    "reviewDate": "2026-07-15 17:37:27 UTC",
+    "reviewDate": "2026-07-15 18:27:08 UTC",
     "model": "gemini-2.5-flash",
     "sourceFile": "Sample-03---Coaching-92NY-Parenting.pdf",
     "toolVersion": "1.0.0"

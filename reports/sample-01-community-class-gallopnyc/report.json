@@ -22,7 +22,7 @@
       },
       {
         "question": "Does the class increase independence or substitute for human assistance?",
-        "answer": "NO"
+        "answer": "YES"
       },
       {
         "question": "Is the class provided exclusively for the benefit of the participant?",
@@ -87,7 +87,7 @@
     "durationPerSession": "30 minutes",
     "fiCoordinator": "Leah Stern",
     "formTitle": "Community Class Pre-approval Checklist",
-    "justification": "Aaron will build confidence and community engagement through structured recreational activities in an integrated, public setting.",
+    "justification": "",
     "lpDate": "03/14/2026",
     "participantAge": "26",
     "safetyFeatures": "",
@@ -153,105 +153,104 @@
     {
       "id": "open-to-public",
       "status": "Met",
-      "note": "The website explicitly states that recreational riding lessons are offered to the public for children and adults of all skill levels, and differentiates this program from therapeutic riding.",
+      "note": "The website explicitly states that recreational riding lessons are offered to the public and are separate from therapeutic riding programs, which are for individuals with disabilities.",
       "evidenceUrl": "https://gallopnyc.org/recreational-riding",
       "quote": "However, we offer a limited number of riding lessons to the public. Our lessons are available for children and adults of all skill levels and experience.",
       "label": "Class is open to and attended by the broader public",
       "type": "web-check",
       "quoteVerified": true,
       "targetedScreenshot": "screenshots/evidence-open-to-public.png",
-      "targetedCapturedAt": "2026-07-15T13:12:23.950Z"
+      "targetedCapturedAt": "2026-07-15T18:24:28.343Z"
     },
     {
       "id": "published-fees",
       "status": "Met",
-      "note": "The website clearly lists prices for both private and group classes, including the 30-minute group session.",
+      "note": "The website clearly publishes the fees for group classes, including the 30-minute group session.",
       "evidenceUrl": "https://gallopnyc.org/recreational-riding",
       "quote": "Group Classes 30-Minute Group - $80",
       "label": "Class has published fees",
       "type": "web-check",
       "quoteVerified": true,
       "targetedScreenshot": "screenshots/evidence-published-fees.png",
-      "targetedCapturedAt": "2026-07-15T13:12:25.161Z"
+      "targetedCapturedAt": "2026-07-15T18:24:29.564Z"
     },
     {
       "id": "fees-identical",
       "status": "Met",
-      "note": "The website publishes a single set of rates for recreational riding lessons, and there is no indication of different pricing for OPWDD vs. non-OPWDD individuals for this specific program. The FAQ mentions OPWDD reimbursement, implying they can participate at the published rates.",
-      "evidenceUrl": "https://gallopnyc.org/recreational-riding",
-      "quote": "Group Classes 30-Minute Group - $80",
+      "note": "The website indicates that recreational riding is separate from therapeutic riding for individuals with disabilities. The published fees are for the recreational program, which is open to the general public, implying identical fees for all participants in this program. While OPWDD individuals can seek reimbursement, no separate pricing for recreational riding is listed for them.",
+      "evidenceUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdiAP_zV_DWc3rn9sYULv_jWBq5P1S3yj4TB0K4JWjny6XHbw/viewform",
+      "quote": "IMPORTANT: This list is for recreational riding only and is separate from our therapeutic riding programs.",
       "label": "Fees are identical for OPWDD and non-OPWDD individuals",
       "type": "web-check",
       "quoteVerified": true,
       "targetedScreenshot": "screenshots/evidence-fees-identical.png",
-      "targetedCapturedAt": "2026-07-15T13:12:26.243Z"
+      "targetedCapturedAt": "2026-07-15T18:24:37.337Z"
     },
     {
       "id": "subject-based",
       "status": "Met",
-      "note": "The program is described as 'Recreational Riding' and a 'horsemanship program,' indicating it teaches the skill of riding and horsemanship.",
+      "note": "The program is described as a 'horsemanship program' where riders 'build skills over time', indicating it teaches a concrete skill.",
       "evidenceUrl": "https://gallopnyc.org/recreational-riding",
-      "quote": "Recreational Riding",
+      "quote": "We're a structured, semester-based horsemanship program, not a drop-in stable.",
       "label": "Class is subject-based (art, dance, martial arts, cooking, etc.)",
       "type": "web-check",
       "quoteVerified": true,
       "targetedScreenshot": "screenshots/evidence-subject-based.png",
-      "targetedCapturedAt": "2026-07-15T13:12:27.302Z"
+      "targetedCapturedAt": "2026-07-15T18:24:30.632Z"
     },
     {
       "id": "no-college-credits",
-      "status": "Met",
-      "note": "There is no mention of college credits or affiliation with a college/university on the provided pages. The program is described as a 'horsemanship program'.",
-      "evidenceUrl": "https://gallopnyc.org/recreational-riding",
-      "quote": "We're a structured, semester-based horsemanship program, not a drop-in stable.",
+      "status": "Needs Review",
+      "note": "There is no mention of college credits being offered for the recreational riding program. The provider is not a college or university. [Auto-downgraded to Needs Review: the supporting quote could not be verified verbatim in the captured page text.]",
+      "evidenceUrl": "",
+      "quote": "",
       "label": "Class does not give college credits",
       "type": "web-check",
-      "quoteVerified": true,
-      "targetedScreenshot": "screenshots/evidence-no-college-credits.png",
-      "targetedCapturedAt": "2026-07-15T13:12:28.569Z"
+      "originalStatus": "Met",
+      "quoteVerified": false
     },
     {
       "id": "not-clinical",
       "status": "Met",
-      "note": "The website explicitly differentiates 'Recreational Riding' from 'therapeutic riding programs,' stating that the recreational program is separate and does not involve PATH Intl. certified therapeutic riding instructors.",
+      "note": "The website explicitly differentiates recreational riding from therapeutic riding, stating that therapeutic riding is for individuals with disabilities and involves PATH Intl. certified instructors experienced in adapting to different abilities. Recreational riding is presented as a separate, non-clinical program.",
       "evidenceUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdiAP_zV_DWc3rn9sYULv_jWBq5P1S3yj4TB0K4JWjny6XHbw/viewform",
-      "quote": "IMPORTANT: This list is for recreational riding only and is separate from our therapeutic riding programs.",
+      "quote": "IMPORTANT: This list is for recreational riding only and is separate from our therapeutic riding programs. If you or your child has a diagnosis of a disability of any kind, therapeutic riding may be a better fit for you since the instructors are PATH Intl. certified and experienced at adapting to all different kinds of abilities.",
       "label": "Class is not clinical/therapy in nature",
       "type": "web-check",
       "quoteVerified": true,
       "targetedScreenshot": "screenshots/evidence-not-clinical.png",
-      "targetedCapturedAt": "2026-07-15T13:12:34.981Z"
+      "targetedCapturedAt": "2026-07-15T18:24:38.429Z"
     },
     {
       "id": "published-schedule",
       "status": "Not Met",
-      "note": "The website states that riders join by the semester and there is a waitlist, but it does not provide a publicly visible schedule with specific days and times for recreational riding classes. It only asks for rider availability.",
-      "evidenceUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdiAP_zV_DWc3rn9sYULv_jWBq5P1S3yj4TB0K4JWjny6XHbw/viewform",
-      "quote": "Please use this form to join the wait list for the recreational riding program at GallopNYC.",
+      "note": "While the website states that riders join by the semester and mentions general availability (weekday mornings, evenings, weekends) on a waitlist form, a specific public schedule with days and times for classes is not published.",
+      "evidenceUrl": "https://gallopnyc.org/faq",
+      "quote": "GallopNYC is a structured horsemanship program, not a drop-in stable, so we don't offer one-time recreational rides. Our riders join by the semester and build skills over time alongside our horses and instructors.",
       "label": "A published schedule of the class exists",
       "type": "web-check",
       "quoteVerified": true,
       "targetedScreenshot": "screenshots/evidence-published-schedule.png",
-      "targetedCapturedAt": "2026-07-15T13:12:36.076Z"
+      "targetedCapturedAt": "2026-07-15T18:24:43.516Z"
     },
     {
       "id": "fee-match",
       "status": "Met",
-      "note": "The published fee of $80 for a 30-minute group session matches the fee stated on the application form.",
+      "note": "The published fee for a 30-minute group lesson is $80, which matches the $80 per 30-minute session stated on the form.",
       "evidenceUrl": "https://gallopnyc.org/recreational-riding",
       "quote": "Group Classes 30-Minute Group - $80",
       "label": "Published fee matches the fee stated on the form",
       "type": "rate-comparison",
       "quoteVerified": true,
       "targetedScreenshot": "screenshots/evidence-fee-match.png",
-      "targetedCapturedAt": "2026-07-15T13:12:29.822Z"
+      "targetedCapturedAt": "2026-07-15T18:24:31.705Z"
     }
   ],
   "rateComparison": {
     "formRate": "$80 per 30-minute session",
-    "websiteRate": "$80 per 30-Minute Group",
+    "websiteRate": "$80 for a 30-Minute Group",
     "verdict": "matches application exactly",
-    "note": "The website lists a 30-minute group lesson for $80, which exactly matches the stated fee on the application form for a 30-minute session."
+    "note": "The website lists '30-Minute Group - $80' on the recreational riding page and '30-Minute Group Lesson $80' on the FAQ page, which matches the application's stated fee of $80 per 30-minute session."
   },
   "internalItems": [
     {
@@ -271,7 +270,7 @@
     },
     {
       "question": "Does the class increase independence or substitute for human assistance?",
-      "formAnswer": "NO",
+      "formAnswer": "YES",
       "websiteVerifiable": false
     },
     {
@@ -351,28 +350,28 @@
       "url": "https://gallopnyc.org/recreational-riding",
       "title": "Recreational Riding — GallopNYC",
       "screenshot": "screenshots/page-1-fullpage.png",
-      "capturedAt": "2026-07-15T13:11:05.675Z",
+      "capturedAt": "2026-07-15T18:23:15.172Z",
       "blocked": false
     },
     {
       "url": "https://docs.google.com/forms/d/e/1FAIpQLSdiAP_zV_DWc3rn9sYULv_jWBq5P1S3yj4TB0K4JWjny6XHbw/viewform",
       "title": "GallopNYC Prospective Recreational Rider Form",
       "screenshot": "screenshots/page-2-fullpage.png",
-      "capturedAt": "2026-07-15T13:11:17.997Z",
+      "capturedAt": "2026-07-15T18:23:27.814Z",
       "blocked": true
     },
     {
       "url": "https://gallopnyc.org/programs",
       "title": "programs | Explore Our Equine Programs — GallopNYC",
       "screenshot": "screenshots/page-3-fullpage.png",
-      "capturedAt": "2026-07-15T13:11:22.392Z",
+      "capturedAt": "2026-07-15T18:23:32.408Z",
       "blocked": false
     },
     {
       "url": "https://gallopnyc.org/faq",
       "title": "General 1 — GallopNYC",
       "screenshot": "screenshots/page-4-fullpage.png",
-      "capturedAt": "2026-07-15T13:11:42.201Z",
+      "capturedAt": "2026-07-15T18:23:51.470Z",
       "blocked": false
     }
   ],
@@ -396,7 +395,7 @@
   ],
   "reviewerNotes": [],
   "meta": {
-    "reviewDate": "2026-07-15 13:12:37 UTC",
+    "reviewDate": "2026-07-15 18:24:44 UTC",
     "model": "gemini-2.5-flash",
     "sourceFile": "Sample-01---Community-Class-GallopNYC.pdf",
     "toolVersion": "1.0.0"

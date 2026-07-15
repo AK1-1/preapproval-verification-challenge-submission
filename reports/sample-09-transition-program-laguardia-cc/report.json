@@ -108,19 +108,20 @@
   "findings": [
     {
       "id": "published-fees",
-      "status": "Needs Review",
-      "note": "The website lists various programs and courses but does not publish specific fees or tuition costs for them. It mentions \"Affordable Programs\" and scholarships but no concrete pricing information is available. [Auto-downgraded to Needs Review: the supporting quote could not be verified verbatim in the captured page text.]",
-      "evidenceUrl": "https://www.laguardia.edu/ce/home/",
-      "quote": "",
+      "status": "Not Met",
+      "note": "No concrete public pricing for courses or programs could be found on the website. Attempts to access the catalog, where fees would typically be listed, resulted in an \"Access Denied\" error.",
+      "evidenceUrl": "https://d51xk5rb7ic32.cloudfront.net/wp-content/uploads/2026/06/summer2026.pdf",
+      "quote": "Access Denied",
       "label": "Published fees exist",
       "type": "web-check",
-      "originalStatus": "Not Met",
-      "quoteVerified": false
+      "quoteVerified": true,
+      "targetedScreenshot": "screenshots/evidence-published-fees.png",
+      "targetedCapturedAt": "2026-07-15T18:25:14.717Z"
     },
     {
       "id": "fee-within-caps",
       "status": "Needs Review",
-      "note": "The website does not publish specific fees for courses or programs, so it is not possible to verify if published fees are within the stated caps. The fee on the form ($300 per course) is within the $350 per course cap.",
+      "note": "No published fees were found on the website to compare against the caps. The stated fee of $300 per course is within the $350 per course cap, but without published fees, a full comparison cannot be made.",
       "evidenceUrl": "",
       "quote": "",
       "label": "Fees are within caps ($350/course, $800/month)",
@@ -129,31 +130,31 @@
     {
       "id": "noncredit-skill-building",
       "status": "Met",
-      "note": "The \"Continuing Education\" division focuses on \"Career Skills & Workforce Training\" and explicitly offers \"College Courses for Non-Credit\", indicating a clear orientation towards skill-building and employment outcomes.",
-      "evidenceUrl": "https://www.laguardia.edu/ce/home/",
-      "quote": "Continuing Education at LaGuardia Community College opens doors to opportunity. Whether you want to learn English, earn a high school equivalency diploma, go to college, get job training, begin or advance in a career, or grow your business, we can help you achieve your goals.",
+      "note": "The website explicitly refers to \"Continuing Education\", \"Career Skills & Workforce Training\", and \"COLLEGE COURSES FOR NON-CREDIT\", indicating a non-credit, skill-building focus.",
+      "evidenceUrl": "https://www.laguardia.edu/ce/search-filter/",
+      "quote": "COLLEGE COURSES FOR NON-CREDIT",
       "label": "Program is noncredit-bearing and oriented to skill-building / employment outcomes",
       "type": "web-check",
       "quoteVerified": true,
       "targetedScreenshot": "screenshots/evidence-noncredit-skill-building.png",
-      "targetedCapturedAt": "2026-07-15T17:39:37.339Z"
+      "targetedCapturedAt": "2026-07-15T18:25:22.380Z"
     },
     {
       "id": "not-opwdd-certified-location",
       "status": "Met",
-      "note": "The program is offered at CUNY LaGuardia Community College, which is a public community college and not an OPWDD-certified location.",
+      "note": "The program is offered at LaGuardia Community College, which is an ordinary community venue and not an OPWDD-certified location.",
       "evidenceUrl": "https://www.laguardia.edu/ce/home/",
       "quote": "CUNY LaGuardia Community College 31-10 Thomson Avenue Long Island City, NY 11101 USA",
       "label": "Program is not in an OPWDD-certified location",
       "type": "web-check",
       "quoteVerified": true,
       "targetedScreenshot": "screenshots/evidence-not-opwdd-certified-location.png",
-      "targetedCapturedAt": "2026-07-15T17:39:38.440Z"
+      "targetedCapturedAt": "2026-07-15T18:25:27.306Z"
     },
     {
       "id": "staff-screening-document",
       "status": "Needs Review",
-      "note": "Needs document: this item is proven by a provider letter, not the website. This check requires a separate background-screening letter from the provider, which is not available on the website.",
+      "note": "Needs document: background-screening letter.",
       "evidenceUrl": "",
       "quote": "",
       "label": "Staff background-screening (needs document, not website)",
@@ -163,7 +164,7 @@
     {
       "id": "fee-match",
       "status": "Needs Review",
-      "note": "The website does not publish specific fees for courses or programs, so a direct comparison to the stated fee of $300 per course on the application form cannot be made.",
+      "note": "No published fee was found on the website to compare with the stated fee of $300 per course.",
       "evidenceUrl": "",
       "quote": "",
       "label": "Published fee matches the fee stated on the form",
@@ -174,7 +175,7 @@
     "formRate": "$300 per course",
     "websiteRate": "not published",
     "verdict": "not published",
-    "note": "The website does not provide specific pricing for courses or programs, making it impossible to compare with the stated fee of $300 per course on the application form."
+    "note": "No specific course fees or program costs were found on the website. Attempts to access the catalog resulted in an 'Access Denied' error."
   },
   "internalItems": [
     {
@@ -229,35 +230,36 @@
       "url": "https://www.laguardia.edu/ce/home/",
       "title": "home – LaGuardia Community College",
       "screenshot": "screenshots/page-1-fullpage.png",
-      "capturedAt": "2026-07-15T17:38:15.844Z",
-      "blocked": false
-    },
-    {
-      "url": "https://www.laguardia.edu/ce/ace-current-catalogs/",
-      "title": "Current Catalogs – LaGuardia Community College",
-      "screenshot": "screenshots/page-2-fullpage.png",
-      "capturedAt": "2026-07-15T17:38:32.302Z",
-      "blocked": false
-    },
-    {
-      "url": "https://www.laguardia.edu/ce/career-skills-training/",
-      "title": "Career Skills & Workforce Training – LaGuardia Community College",
-      "screenshot": "screenshots/page-3-fullpage.png",
-      "capturedAt": "2026-07-15T17:38:43.521Z",
+      "capturedAt": "2026-07-15T18:24:15.767Z",
       "blocked": false
     },
     {
       "url": "https://www.laguardia.edu/ce/search-filter/",
       "title": "Find Courses, Certificates & Programs – LaGuardia Community College",
-      "screenshot": "screenshots/page-4-fullpage.png",
-      "capturedAt": "2026-07-15T17:38:54.449Z",
+      "screenshot": "screenshots/page-2-fullpage.png",
+      "capturedAt": "2026-07-15T18:24:25.766Z",
       "blocked": false
     },
     {
-      "url": "https://www.laguardia.edu/ce/pre-college-and-high-school-equivalency/",
-      "title": "Pre-College and High School Equivalency – LaGuardia Community College",
-      "screenshot": "screenshots/page-5-fullpage.png",
-      "capturedAt": "2026-07-15T17:39:13.569Z",
+      "url": "https://www.laguardia.edu/ce/ace-current-catalogs/",
+      "title": "Current Catalogs – LaGuardia Community College",
+      "screenshot": "screenshots/page-3-fullpage.png",
+      "capturedAt": "2026-07-15T18:24:36.502Z",
+      "blocked": false
+    },
+    {
+      "url": "https://d51xk5rb7ic32.cloudfront.net/wp-content/uploads/2026/06/summer2026.pdf",
+      "title": "Access Denied | LaGuardia Community College",
+      "screenshot": "screenshots/page-4-fullpage.png",
+      "capturedAt": "2026-07-15T18:24:51.493Z",
+      "blocked": true
+    },
+    {
+      "url": "https://d51xk5rb7ic32.cloudfront.net/wp-content/uploads/2026/06/winter2026.pdf",
+      "title": "(failed to load)",
+      "error": "page.goto: Download is starting\nCall log:\n\u001b[2m  - navigating to \"https://d51xk5rb7ic32.cloudfront.net/wp-content/uploads/2026/06/winter2026.pdf\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "capturedAt": null,
+      "screenshot": null,
       "blocked": false
     }
   ],
@@ -267,25 +269,25 @@
       "text": "HOME\nCAREER SKILLS & WORKFORCE TRAINING\nENGLISH LANGUAGE LEARNING\nBUSINESS SERVICES\nPRE-COLLEGE & HIGH SCHOOL EQUIVALENCY\nSUPPORT SERVICES\nFIND COURSES, CERTIFICATES AND PROGRAMS\n\nCONTINUING EDUCATION\n\nCareer Skills & Workforce Training\n\nEnglish Language Learning\n\nPre-College & High School Equivalency\n\nSmall Business & Entrepreneur Services\n\nRegister for a Course\n\nView our Catalog\n\nLaGuardia Foundation ACE Scholarships\n\nGet help with tuition and pursue your goals!\nFull and partial tuition scholarships are available for eligible students.\n\nClick Here for more information.\n\nFIND COURSES, CERTIFICATES AND PROGRAMS\nAbout Continuing Education\n\nContinuing Education at LaGuardia Community College opens doors to opportunity. Whether you want to learn English, earn a high school equivalency diploma, go to college, get job training, begin or advance in a career, or grow your business, we can help you achieve your goals.\n\nExpert Instructors\nSupportive Classroom Environment\nDiverse Student Body\nAffordable Programs\n\nLearn More\nRead the Student Conduct Code \n\nMoving the Community Forward \n60\nPrograms\n\t\n10,000\nStudents\n\t\n30,000\nBusiness Served\n\t\nKnow\nYour Rights\nExplore Opportunities\nSign up for CUNY Alert!\n\nCUNY Alert allows you to receive text, email, and/or voice alerts of emergencies or weather-related closings. Continuing Education students can sign up as Guest Users.\n\nSIGN UP NOW\nCONTACT CONTINUING EDUCATION\n\n  718-482-7244\n\n  ACEreg@lagcc.cuny.edu\n\n \n\n \n\n  CUNY LaGuardia Community College\n  31-10 Thomson Avenue\n  Long Island City, NY 11101 USA\n\n \n\nFOLLOW US\n\n @Continuing Education at LaGuardia\n  @continuing.ed_lagcc\nAbout\nCalendar\nJob Opportunities\nJob Opportunities – Research Foundation-CUNY\nRegistration\nFind Courses, Certificates and Programs\nClick on the image for current catalogs\n@Copyright. All Rights Reserved\nSecurity\nPrivacy Policy\nPolicies & Governance\nEqual Opportunity and Non-Discrimination\nGet Acrobat Reader"
     },
     {
-      "url": "https://www.laguardia.edu/ce/ace-current-catalogs/",
-      "text": "HOME\nCAREER SKILLS & WORKFORCE TRAINING\nENGLISH LANGUAGE LEARNING\nBUSINESS SERVICES\nPRE-COLLEGE & HIGH SCHOOL EQUIVALENCY\nSUPPORT SERVICES\nFIND COURSES, CERTIFICATES AND PROGRAMS\n\nCONTINUING EDUCATION\n\nHomeContinuing EducationCurrent Catalogs\nFind Courses, Certificates & Programs\n \nRequest Info\n \nCurrent Catalogs\nCurrent Catalogs\n \nSummer 2026\n \nContinuing Education Brochure\nPrevious Catalogs\nWinter 2026\nSpring 2026\nWinter 2025\nSpring 2025\nSummer 2025\nFall 2025\nWinter 2024\nSpring 2024\nSummer 2024\nFall 2024\nWinter 2023\nSpring 2023\nSummer 2023\nFall 2023\nWinter 2022\nSpring 2022\nSummer 2022\nFall 2022\nWinter 2021\nSpring 2021\nSummer 2021\nFall 2021\nSign up for CUNY Alert!\n\nCUNY Alert allows you to receive text, email, and/or voice alerts of emergencies or weather-related closings. Continuing Education students can sign up as Guest Users.\n\nSIGN UP NOW\nCONTACT CONTINUING EDUCATION\n\n  718-482-7244\n\n  ACEreg@lagcc.cuny.edu\n\n \n\n \n\n  CUNY LaGuardia Community College\n  31-10 Thomson Avenue\n  Long Island City, NY 11101 USA\n\n \n\nFOLLOW US\n\n @Continuing Education at LaGuardia\n  @continuing.ed_lagcc\nAbout\nCalendar\nJob Opportunities\nJob Opportunities – Research Foundation-CUNY\nRegistration\nFind Courses, Certificates and Programs\nClick on the image for current catalogs\n@Copyright. All Rights Reserved\nSecurity\nPrivacy Policy\nPolicies & Governance\nEqual Opportunity and Non-Discrimination\nGet Acrobat Reader"
-    },
-    {
-      "url": "https://www.laguardia.edu/ce/career-skills-training/",
-      "text": "HOME\nCAREER SKILLS & WORKFORCE TRAINING\nENGLISH LANGUAGE LEARNING\nBUSINESS SERVICES\nPRE-COLLEGE & HIGH SCHOOL EQUIVALENCY\nSUPPORT SERVICES\nFIND COURSES, CERTIFICATES AND PROGRAMS\n\nCONTINUING EDUCATION\n\nHomeContinuing EducationCareer Skills & Workforce Training\nFind Courses, Certificates & Programs\n \nRequest Info\n \nCurrent Catalogs\nCareer Skills & Workforce Training\n\nDo you want a meaningful job with a promising future?\n\nAre you ready to take your career to the next level?\n\nWe offer a wide range of high quality, short term and affordable courses and certificate programs in most major industries to help you reach your goals.\n\nPrograms and courses are offered online or through a combination of online and in-person classes. Partial tuition scholarships are available for eligible students. A separate application process is required. \n\nExplore the many options available to start or continue your career path.\n\nHealthcare\nAdvanced Industrial, Manufacturing & Transportation Programs\nTechnology\nFilm Production\nCareer Skills\nBusiness & Finance\nConstruction, Building Management & Sustainability\nVeterans Workforce Initiatives\nLegal Interpreting\nEducation Training\nCybersecurity Training\n\nHelp protect against hackers! Cyber attacks are on the rise, and trained cybersecurity professionals are in high demand. Join thousands of experts who protect businesses, government agencies and general consumers.\n\nClasses offered at our Manhattan location. Scholarships available.\n\nRegister Today\n\nCertified Medical Administrative Assistant Program\n\nWant to enter the healthcare field? Get training as a Certified Medical Administrative Assistant (CMAA) and earn over $46K (median salary). Our program offers career readiness and job placement support. Classes begin on April 1.\n\nScholarships are available!.\n\nRegister Today.\n\nHealthcare Finance and Operations\n(formerly Medical Billing)\n\nGet hands-on training in medical billing and more to prepare for positions with large healthcare providers. Earn 9 college credits towards a Business Administration/Healthcare Management major at LaGuardia Community College.\n\nLearn more.\n\nQuickBooks Certificate Program\n\nLearn QuickBooks, one of the most important accounting software programs! Begin a career in accounting or finance, or manage bookkeeping for your business.\n\nSign up for an information session!\n\nLearn more.\n\nMental Health Career Pathway Initiative\n\nUse your own lived experience with mental health challenges and recovery to become a peer support worker in the human services sector. Work in a variety of settings.\n\nLearn more.\n\nBecome an Emergency Medical Technician\n\nLaGuardia’s EMT Program trains NYC’s first responders.\n\nSign up for CUNY Alert!\n\nCUNY Alert allows you to receive text, email, and/or voice alerts of emergencies or weather-related closings. Continuing Education students can sign up as Guest Users.\n\nSIGN UP NOW\nCONTACT CONTINUING EDUCATION\n\n  718-482-7244\n\n  ACEreg@lagcc.cuny.edu\n\n \n\n \n\n  CUNY LaGuardia Community College\n  31-10 Thomson Avenue\n  Long Island City, NY 11101 USA\n\n \n\nFOLLOW US\n\n @Continuing Education at LaGuardia\n  @continuing.ed_lagcc\nAbout\nCalendar\nJob Opportunities\nJob Opportunities – Research Foundation-CUNY\nRegistration\nFind Courses, Certificates and Programs\nClick on the image for current catalogs\n@Copyright. All Rights Reserved\nSecurity\nPrivacy Policy\nPolicies & Governance\nEqual Opportunity and Non-Discrimination\nGet Acrobat Reader"
-    },
-    {
       "url": "https://www.laguardia.edu/ce/search-filter/",
       "text": "HOME\nCAREER SKILLS & WORKFORCE TRAINING\nENGLISH LANGUAGE LEARNING\nBUSINESS SERVICES\nPRE-COLLEGE & HIGH SCHOOL EQUIVALENCY\nSUPPORT SERVICES\nFIND COURSES, CERTIFICATES AND PROGRAMS\n\nCONTINUING EDUCATION\n\nHomeContinuing EducationFind Courses, Certificates & Programs\nFind Courses, Certificates & Programs\n \nRequest Info\n \nCurrent Catalogs\nFind Courses, Certificates & Programs\nFilter\nSearch\nAll Categories\nAll Categories\nBusiness Services\n(7)\nCareer Skills & Workforce Training\n(41)\nEnglish Language Learning\n(14)\nPre-College & High School Equivalency\n(16)\nSelect a subcategory\n20 results available\nClear All\nHIGH SCHOOL EQUIVALENCY (HSE)\n\nADULT BASIC SKILLS\nHIGH SCHOOL EQUIVALENCY\n\nCAREER SKILLS & WORKFORCE TRAINING\n\nARTIFICIAL INTELLIGENCE (AI) CERTIFICATION PROGRAM\n\nCERTIFICATES\n\nBUILDING OPERATIONS\n\nBUSINESS SERVICES\n\nBUSINESS PARTNERSHIPS\n\nCAREER SKILLS\n\nBUSINESS SKILLS AND ENTREPRENEURSHIP WORKSHOP SERIES\n\nBUSINESS SERVICES\n\nCENTER FOR CONTRACT TRAINING\n\nCENTER FOR IMMIGRANT EDUCATION & TRAINING\n\nCENTER FOR IMMIGRANT\nEDUCATION AND TRAINING\n\nCERTIFICATES\n\nCENTRAL SERVICE TECHNICIAN CERTIFICATE\n\nEDUCATION TRAINING\n\nCERTIFICACIÓN EN EL CUIDADO DE NIÑOS\n\nCAREER SKILLS\n\nCERTIFIED ADMINISTRATIVE PROFESSIONAL\n\nHEALTHCARE\n\nCERTIFIED CLINICAL MEDICAL ASSISTANT\n\nHEALTHCARE\n\nCERTIFIED MEDICAL ADMINISTRATIVE ASSISTANT (CMAA)\n\nEDUCATION TRAINING\n\nCHILDCARE CERTIFICATE PROGRAM\n\nCOLLEGE COURSES FOR NON-CREDIT\n\nCOLLEGE ART\n\nPRE-COLLEGE PROGRAMS\n\nCOLLEGE LEVEL\nEXAMINATION PROGRAM (CLEP)\n\nPRE-COLLEGE PROGRAMS\n\nCOLLEGE LIBERAL ARTS\n\nPRE-COLLEGE PROGRAMS\n\nCOLLEGE MODERN LANGUAGES\n\nCOLLEGE COURSES FOR NON-CREDIT\n\nCOLLEGE MUSIC\n\nHEALTHCARE\n\nCOMMUNITY HEALTH WORKER\nCERTIFICATE TRAINING PROGRAM\n\nTECHNOLOGY\n\nCOMPUTER AND NETWORK SERVICE TECHNICIAN CERTIFICATE PROGRAM\n\nCONNECTING IMMIGRANT PARENTS\nTO SCHOOL PROJECTS\n\nCERTIFICATES\n\nCONSTRUCTION MANAGEMENT PROGRAM\n\nCONSTRUCTION, BUILDING MANAGEMENT & SUSTAINABILITY\n\nCONSTRUCTION PROJECT MANAGEMENT\n\nCERTIFICATES\n\nCONSTRUCTION SAFETY COURSES\n\nCONSTRUCTION SKILLS, SAFETY AND SUSTAINABILITY TRAINING PROGRAM\n\nCONSTRUCTION SKILLS, SAFETY AND SUSTAINABILITY\nTRAINING PROGRAM\n\nHIGH SCHOOL EQUIVALENCY (HSE)\n\nCUNY FATHERHOOD ACADEMY\n\nCUNY LANGUAGE IMMERSION PROGRAM\n\nCUNY LANGUAGE IMMERSION\nPROGRAM\n\nPRE-COLLEGE PROGRAMS\n\nCUNY START\n\nTECHNOLOGY\n\nCYBERSECURITY AND PRIVACY MANAGEMENT\n\nTECHNOLOGY\n\nDATA ANALYTICS AND DATA SCIENCE PROGRAM\n\nCAREER SKILLS & WORKFORCE TRAINING\n\nDATA ANALYTICS PRE-APPRENTICESHIP\nBOOTCAMP @ CIVIC HALL\n\nTECHNOLOGY\n\nDIGITAL BUSINESS SKILLS\n\nCONSTRUCTION, BUILDING MANAGEMENT & SUSTAINABILITY\n\nELECTRICAL 1 TRAINING PROGRAM\n\nHEALTHCARE\n\nEMERGENCY MEDICAL TECHNICIAN (EMT)\n\nCENTER FOR IMMIGRANT EDUCATION & TRAINING\n\nEN CAMINO / ON OUR WAY\n\nCENTER FOR IMMIGRANT EDUCATION & TRAINING\n\nENGLISH AND CITIZENSHIP\n\nCENTER FOR IMMIGRANT EDUCATION & TRAINING\n\nENGLISH AND CIVICS\n\nCENTER FOR IMMIGRANT EDUCATION & TRAINING\n\nENGLISH AND IMMIGRANT\nFAMILY LITERACY\n\nCENTER FOR IMMIGRANT EDUCATION & TRAINING\n\nENGLISH EXPRESS\n\nCENTER FOR IMMIGRANT EDUCATION & TRAINING\n\nENGLISH FOR WORKFORCE\nDEVELOPMENT\n\nHIGH SCHOOL EQUIVALENCY (HSE)\n\nEQUIVALENCIA DEL BACHILLERATO EN ESPAÑOL\n\nCAREER SKILLS & WORKFORCE TRAINING\n\nFILM PRODUCTION\nGRIP TRAINING PROGRAM\n\nBUSINESS SERVICES\n\nGOLDMAN SACHS\n10,000 SMALL BUSINESSES\n\nHEALTHCARE\n\nHEALTHCARE FINANCE AND OPERATIONS\n(FORMERLY MEDICAL BILLING)\n\nHIGH SCHOOL EQUIVALENCY (HSE)\n\nHIGH SCHOOL EQUIVALENCY (HSE) OVERVIEW\n\nHIGH SCHOOL EQUIVALENCY (HSE)\n\nHIGH SCHOOL EQUIVALENCY EXAM\nGED® TESTING CENTER\n\nCENTER FOR IMMIGRANT EDUCATION & TRAINING\n\nHOTEL T.E.A.C.H.\nPROJECT CURRICULUM\n\nCONSTRUCTION, BUILDING MANAGEMENT & SUSTAINABILITY\n\nHVACR 1 TRAINING PROGRAM\n\nBUSINESS SERVICES\n\nLAGUARDIA APEX ACCELERATOR\n\nLEGAL\n\nLEGAL INTERPRETER CERTIFICATE PROGRAM\n\nSign up for CUNY Alert!\n\nCUNY Alert allows you to receive text, email, and/or voice alerts of emergencies or weather-related closings. Continuing Education students can sign up as Guest Users.\n\nSIGN UP NOW\nCONTACT CONTINUING EDUCATION\n\n  718-482-7244\n\n  ACEreg@lagcc.cuny.edu\n\n \n\n \n\n  CUNY LaGuardia Community College\n  31-10 Thomson Avenue\n  Long Island City, NY 11101 USA\n\n \n\nFOLLOW US\n\n @Continuing Education at LaGuardia\n  @continuing.ed_lagcc\nAbout\nCalendar\nJob Opportunities\nJob Opportunities – Research Foundation-CUNY\nRegistration\nFind Courses, Certificates and Programs\nClick on the image for current catalogs\n@Copyright. All Rights Reserved\nSecurity\nPrivacy Policy\nPolicies & Governance\nEqual Opportunity and Non-Discrimination\nGet Acrobat Reader\n "
     },
     {
-      "url": "https://www.laguardia.edu/ce/pre-college-and-high-school-equivalency/",
-      "text": "HOME\nCAREER SKILLS & WORKFORCE TRAINING\nENGLISH LANGUAGE LEARNING\nBUSINESS SERVICES\nPRE-COLLEGE & HIGH SCHOOL EQUIVALENCY\nSUPPORT SERVICES\nFIND COURSES, CERTIFICATES AND PROGRAMS\n\nCONTINUING EDUCATION\n\nHomeContinuing EducationPre-College and High School Equivalency\nFind Courses, Certificates & Programs\n \nRequest Info\n \nCurrent Catalogs\nPre-College and High School Equivalency\n\nPreparing you to earn your high school equivalency diploma, getting you into college and putting you on the path to a vibrant career and brighter future is what LaGuardia Community College does for thousands of students each year. Whether you need to work on basic skills or want support as you transition into college studies, our wide variety of programs meet you at the level you’re at and help you reach your educational goals.\n\nOur pioneering programs are making an impact regionally and nationally, and have become models for other institutes disseminated through educator training across the country.\n\nHigh School Equivalence (HSE)\nPre-College Programs\nYouth Programs\nCollege Courses for Non-Credit\nAdult Basic Skills\nImprove your earning potential by getting a high school equivalency diploma. Study in a supportive learning environment.\nCollege Modern Languages\n\nLearn a new language! Continuing Education at LaGuardia offers college level Modern Language courses on a non-credit basis. Choose from Spanish, Italian, Japanese, Korean, Arabic and more. Elementary and some advanced level courses are available.\n\nRegister now for an upcoming course!\n\nCUNY Start\n\nStart out strong in your college career and reduce the amount of time spent in required remedial classes.\n\nCUNY Fatherhood Academy\nIf you are a father between the ages of 18 and 30, unemployed or underemployed, we can help you create a brighter future for you and your family.\nSign up for CUNY Alert!\n\nCUNY Alert allows you to receive text, email, and/or voice alerts of emergencies or weather-related closings. Continuing Education students can sign up as Guest Users.\n\nSIGN UP NOW\nCONTACT CONTINUING EDUCATION\n\n  718-482-7244\n\n  ACEreg@lagcc.cuny.edu\n\n \n\n \n\n  CUNY LaGuardia Community College\n  31-10 Thomson Avenue\n  Long Island City, NY 11101 USA\n\n \n\nFOLLOW US\n\n @Continuing Education at LaGuardia\n  @continuing.ed_lagcc\nAbout\nCalendar\nJob Opportunities\nJob Opportunities – Research Foundation-CUNY\nRegistration\nFind Courses, Certificates and Programs\nClick on the image for current catalogs\n@Copyright. All Rights Reserved\nSecurity\nPrivacy Policy\nPolicies & Governance\nEqual Opportunity and Non-Discrimination\nGet Acrobat Reader"
+      "url": "https://www.laguardia.edu/ce/ace-current-catalogs/",
+      "text": "HOME\nCAREER SKILLS & WORKFORCE TRAINING\nENGLISH LANGUAGE LEARNING\nBUSINESS SERVICES\nPRE-COLLEGE & HIGH SCHOOL EQUIVALENCY\nSUPPORT SERVICES\nFIND COURSES, CERTIFICATES AND PROGRAMS\n\nCONTINUING EDUCATION\n\nHomeContinuing EducationCurrent Catalogs\nFind Courses, Certificates & Programs\n \nRequest Info\n \nCurrent Catalogs\nCurrent Catalogs\n \nSummer 2026\n \nContinuing Education Brochure\nPrevious Catalogs\nWinter 2026\nSpring 2026\nWinter 2025\nSpring 2025\nSummer 2025\nFall 2025\nWinter 2024\nSpring 2024\nSummer 2024\nFall 2024\nWinter 2023\nSpring 2023\nSummer 2023\nFall 2023\nWinter 2022\nSpring 2022\nSummer 2022\nFall 2022\nWinter 2021\nSpring 2021\nSummer 2021\nFall 2021\nSign up for CUNY Alert!\n\nCUNY Alert allows you to receive text, email, and/or voice alerts of emergencies or weather-related closings. Continuing Education students can sign up as Guest Users.\n\nSIGN UP NOW\nCONTACT CONTINUING EDUCATION\n\n  718-482-7244\n\n  ACEreg@lagcc.cuny.edu\n\n \n\n \n\n  CUNY LaGuardia Community College\n  31-10 Thomson Avenue\n  Long Island City, NY 11101 USA\n\n \n\nFOLLOW US\n\n @Continuing Education at LaGuardia\n  @continuing.ed_lagcc\nAbout\nCalendar\nJob Opportunities\nJob Opportunities – Research Foundation-CUNY\nRegistration\nFind Courses, Certificates and Programs\nClick on the image for current catalogs\n@Copyright. All Rights Reserved\nSecurity\nPrivacy Policy\nPolicies & Governance\nEqual Opportunity and Non-Discrimination\nGet Acrobat Reader"
+    },
+    {
+      "url": "https://d51xk5rb7ic32.cloudfront.net/wp-content/uploads/2026/06/summer2026.pdf",
+      "text": "Academics\nAdmissions\nStudent Services\nAbout\n\nERROR 403\n\nAccess\nDenied\n\nYou don't have permission to access this page. If you believe this is a mistake, please sign in or contact the Help Desk.\n\n403\n\nWHY DID THIS HAPPEN?\n\nCommon reasons for this error:\n\nYou may not be signed in, your session may have expired, or this page requires a specific role or permission. It may also be triggered by a security rule if unusual activity was detected.\n\nSign in with CUNY Login\nLaGuardia Homepage\nStudent Services\n© 2026 LaGuardia Community College — City University of New York\nContact"
+    },
+    {
+      "url": "https://d51xk5rb7ic32.cloudfront.net/wp-content/uploads/2026/06/winter2026.pdf",
+      "text": ""
     }
   ],
   "reviewerNotes": [],
   "meta": {
-    "reviewDate": "2026-07-15 17:39:39 UTC",
+    "reviewDate": "2026-07-15 18:25:28 UTC",
     "model": "gemini-2.5-flash",
     "sourceFile": "Sample-09---Transition-Program-LaGuardia-CC.pdf",
     "toolVersion": "1.0.0"

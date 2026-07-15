@@ -36,10 +36,14 @@
     "missingInfo": [],
     "appeal": null,
     "brokerName": "Michael Ross",
+    "durationPerSession": "",
     "fiCoordinator": "Leah Stern",
     "formTitle": "Health Club / Organizational Memberships Pre-approval Checklist",
+    "justification": "Rivka will increase physical activity and community inclusion through a public gym membership.",
     "lpDate": "03/22/2026",
     "participantAge": "31",
+    "safetyFeatures": "",
+    "subjectArea": "",
     "valuedOutcome": "Rivka will increase physical activity and community inclusion through a public gym membership."
   },
   "category": {
@@ -73,45 +77,45 @@
     {
       "id": "open-to-public",
       "status": "Met",
-      "note": "The website clearly presents membership options for 'CLASSIC' and 'PF BLACK CARD®' and includes 'Join Now' buttons, indicating it is open to the public.",
+      "note": "The website clearly presents membership options (Classic and PF Black Card®) with \"Join Now\" buttons, indicating it is open to the public.",
       "evidenceUrl": "https://www.planetfitness.com/gym-memberships",
       "quote": "Join Now",
       "label": "Organization is open to the public (not private/invitation-only)",
       "type": "web-check",
       "quoteVerified": true,
       "targetedScreenshot": "screenshots/evidence-open-to-public.png",
-      "targetedCapturedAt": "2026-07-15T16:14:19.476Z"
+      "targetedCapturedAt": "2026-07-15T18:29:02.332Z"
     },
     {
       "id": "published-fee",
       "status": "Met",
-      "note": "The website explicitly states the starting monthly fee for Classic memberships.",
+      "note": "The website explicitly states that Classic memberships begin at $15, billed monthly.",
       "evidenceUrl": "https://www.planetfitness.com/gym-memberships",
       "quote": "*Classic memberships begin at $15 and PF Black Card® memberships begin at $24.99, billed monthly.",
       "label": "Membership fee is published",
       "type": "web-check",
       "quoteVerified": true,
       "targetedScreenshot": "screenshots/evidence-published-fee.png",
-      "targetedCapturedAt": "2026-07-15T16:14:20.789Z"
+      "targetedCapturedAt": "2026-07-15T18:29:03.871Z"
     },
     {
       "id": "fee-match",
       "status": "Met",
-      "note": "The website states that Classic memberships begin at $15, billed monthly, which matches the $15.00 Monthly fee stated on the application form.",
+      "note": "The website states that Classic memberships begin at $15, billed monthly, which matches the $15.00 Monthly fee on the application.",
       "evidenceUrl": "https://www.planetfitness.com/gym-memberships",
       "quote": "*Classic memberships begin at $15 and PF Black Card® memberships begin at $24.99, billed monthly.",
       "label": "Published membership fee matches the form (yearly/monthly)",
       "type": "rate-comparison",
       "quoteVerified": true,
       "targetedScreenshot": "screenshots/evidence-fee-match.png",
-      "targetedCapturedAt": "2026-07-15T16:14:21.934Z"
+      "targetedCapturedAt": "2026-07-15T18:29:05.072Z"
     }
   ],
   "rateComparison": {
     "formRate": "$15.00 Monthly",
-    "websiteRate": "$15 Monthly",
+    "websiteRate": "$15 billed monthly",
     "verdict": "matches application exactly",
-    "note": "The website states that Classic memberships begin at $15, billed monthly, which matches the $15.00 Monthly stated on the form."
+    "note": "The website states that Classic memberships begin at $15, billed monthly, which matches the $15.00 Monthly fee on the application form."
   },
   "internalItems": [
     {
@@ -151,14 +155,14 @@
       "url": "https://www.planetfitness.com/gyms/",
       "title": "Gyms Near Me | Fitness Centers Near Me | Planet Fitness",
       "screenshot": "screenshots/page-1-fullpage.png",
-      "capturedAt": "2026-07-15T16:13:50.319Z",
+      "capturedAt": "2026-07-15T18:28:31.968Z",
       "blocked": false
     },
     {
       "url": "https://www.planetfitness.com/gym-memberships",
       "title": "Gym Memberships | Starting at $15 | Planet Fitness",
       "screenshot": "screenshots/page-2-fullpage.png",
-      "capturedAt": "2026-07-15T16:14:01.836Z",
+      "capturedAt": "2026-07-15T18:28:41.428Z",
       "blocked": false
     }
   ],
@@ -174,7 +178,7 @@
   ],
   "reviewerNotes": [],
   "meta": {
-    "reviewDate": "2026-07-15 16:14:23 UTC",
+    "reviewDate": "2026-07-15 18:29:06 UTC",
     "model": "gemini-2.5-flash",
     "sourceFile": "Sample-04---Membership-Planet-Fitness.pdf",
     "toolVersion": "1.0.0"

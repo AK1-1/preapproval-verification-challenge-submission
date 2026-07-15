@@ -1,0 +1,236 @@
+{
+  "id": "sample-06-hri-bathroom-grab-bar",
+  "parsed": {
+    "category": "hri",
+    "participantName": "David F.",
+    "requestedItem": "Bathroom safety grab bar (wall-mounted)",
+    "providerName": "Amazon",
+    "url": "https://www.amazon.com/dp/B0009X3S6C",
+    "statedFee": "",
+    "checklistAnswers": [
+      {
+        "question": "Is Household-Related Items approved in the budget?",
+        "answer": "YES"
+      },
+      {
+        "question": "Is the individual over 18?",
+        "answer": "YES"
+      },
+      {
+        "question": "Is the item related to a need or goal identified in the Life Plan?",
+        "answer": "YES"
+      },
+      {
+        "question": "Will the item increase independence, or substitute for human assistance?",
+        "answer": "YES"
+      },
+      {
+        "question": "Does the item increase safety of the participant in their home environment?",
+        "answer": "YES"
+      },
+      {
+        "question": "Is the item exclusively needed for the participant?",
+        "answer": "YES"
+      },
+      {
+        "question": "Does the item increase the participant's health and safety?",
+        "answer": "YES"
+      },
+      {
+        "question": "Does the individual live in their own home? (for Household support only)",
+        "answer": "YES"
+      },
+      {
+        "question": "Was the same item bought already in this budget year?",
+        "answer": "NO"
+      },
+      {
+        "question": "Can the item be funded through other sources?",
+        "answer": "NO"
+      }
+    ],
+    "missingInfo": [],
+    "appeal": null,
+    "brokerName": "Michael Ross",
+    "fiCoordinator": "Leah Stern",
+    "formTitle": "Household Related Items Pre-Approval Form",
+    "justification": "David has limited mobility and needs a grab bar to transfer safely in the bathroom and reduce fall risk, increasing his independence at home.",
+    "lpDate": "05/06/2026",
+    "participantAge": "40",
+    "safetyFeatures": "Slip-resistant grip; supports up to 500 lbs; ADA-compliant mounting",
+    "valuedOutcome": "David will safely and independently manage personal-care routines in his own home."
+  },
+  "category": {
+    "key": "hri",
+    "label": "Household Related Items (HRI)",
+    "detectHints": [
+      "Household Related Items",
+      "HRI"
+    ],
+    "rateFieldLabel": "Item price",
+    "caps": {
+      "perBudgetYear": 1500,
+      "approvalValidMonths": 3
+    },
+    "capNotes": [
+      "Capped at $1,500 per budget year; approval valid 3 months.",
+      "Adults only (18+)."
+    ],
+    "exclusionList": [
+      "Academic Tutoring",
+      "Automatic Pill Dispenser/Medication System",
+      "Cell Phones/Telephones",
+      "Computer Hardware",
+      "Computer Programs/Software",
+      "Leased & Purchased Vehicles",
+      "Health-Related Services/Equipment/Supplies",
+      "Parent/Participant/Staff Activity Fees, Expenses & Meals",
+      "Personal Monitoring Systems",
+      "Direct Clinician services & therapies (OT, PT, Speech, Psychology) and experimental therapies"
+    ],
+    "webChecks": [
+      {
+        "id": "item-exists-with-price",
+        "label": "The item exists at the linked page, with a visible price",
+        "criteria": "The linked product page must show the requested item with a concrete visible price."
+      },
+      {
+        "id": "not-excluded",
+        "label": "Item is plausibly NOT on the IDGS/HRI exclusion list",
+        "type": "exclusion-check",
+        "criteria": "Judge the item against the exclusion list. A laptop/desktop/tablet is 'Computer Hardware' and MUST be flagged Not Met. IMPORTANT: home-safety and accessibility hardware (grab bars, shower seats, ramps, bed rails, non-slip equipment) is the CORE PURPOSE of HRI and is NOT excluded - the 'Health-Related Services/Equipment/Supplies' entry refers to clinical/medical devices, therapies, and medical supplies, not home-safety modifications. When genuinely in doubt, Needs Review."
+      },
+      {
+        "id": "safety-features",
+        "label": "Safety features described on the form are supported by the product page",
+        "criteria": "If the form describes safety features, verify the product page supports them. If the form lists no safety features (N/A), mark Needs Review with a note that no safety features were claimed."
+      },
+      {
+        "id": "price-within-cap",
+        "label": "Item price is within the $1,500/budget-year cap",
+        "type": "cap-check",
+        "criteria": "Compare the visible product price against the $1,500 per budget year cap."
+      }
+    ]
+  },
+  "findings": [
+    {
+      "id": "item-exists-with-price",
+      "status": "Needs Review",
+      "note": "No website content was captured, so it's not possible to verify if the item exists with a visible price.",
+      "evidenceUrl": "",
+      "quote": "",
+      "label": "The item exists at the linked page, with a visible price",
+      "type": "web-check"
+    },
+    {
+      "id": "not-excluded",
+      "status": "Met",
+      "note": "The requested item, a bathroom safety grab bar, is a home-safety and accessibility hardware item, which is explicitly stated as a core purpose of HRI and not excluded by the 'Health-Related Services/Equipment/Supplies' entry.",
+      "evidenceUrl": "",
+      "quote": "",
+      "label": "Item is plausibly NOT on the IDGS/HRI exclusion list",
+      "type": "exclusion-check"
+    },
+    {
+      "id": "safety-features",
+      "status": "Needs Review",
+      "note": "The application form did not describe any specific safety features for the item.",
+      "evidenceUrl": "",
+      "quote": "",
+      "label": "Safety features described on the form are supported by the product page",
+      "type": "web-check"
+    },
+    {
+      "id": "price-within-cap",
+      "status": "Needs Review",
+      "note": "No website content was captured, so it's not possible to verify the item's price against the $1,500 cap.",
+      "evidenceUrl": "",
+      "quote": "",
+      "label": "Item price is within the $1,500/budget-year cap",
+      "type": "cap-check"
+    }
+  ],
+  "rateComparison": {
+    "formRate": "",
+    "websiteRate": "not published",
+    "verdict": "not published",
+    "note": "No website content was captured, so the rate could not be found or compared."
+  },
+  "internalItems": [
+    {
+      "question": "Is Household-Related Items approved in the budget?",
+      "formAnswer": "YES",
+      "websiteVerifiable": false
+    },
+    {
+      "question": "Is the individual over 18?",
+      "formAnswer": "YES",
+      "websiteVerifiable": false
+    },
+    {
+      "question": "Is the item related to a need or goal identified in the Life Plan?",
+      "formAnswer": "YES",
+      "websiteVerifiable": false
+    },
+    {
+      "question": "Will the item increase independence, or substitute for human assistance?",
+      "formAnswer": "YES",
+      "websiteVerifiable": false
+    },
+    {
+      "question": "Does the item increase safety of the participant in their home environment?",
+      "formAnswer": "YES",
+      "websiteVerifiable": false
+    },
+    {
+      "question": "Is the item exclusively needed for the participant?",
+      "formAnswer": "YES",
+      "websiteVerifiable": false
+    },
+    {
+      "question": "Does the item increase the participant's health and safety?",
+      "formAnswer": "YES",
+      "websiteVerifiable": false
+    },
+    {
+      "question": "Does the individual live in their own home? (for Household support only)",
+      "formAnswer": "YES",
+      "websiteVerifiable": false
+    },
+    {
+      "question": "Was the same item bought already in this budget year?",
+      "formAnswer": "NO",
+      "websiteVerifiable": false
+    },
+    {
+      "question": "Can the item be funded through other sources?",
+      "formAnswer": "NO",
+      "websiteVerifiable": false
+    }
+  ],
+  "appealAssessment": "",
+  "pages": [
+    {
+      "url": "https://www.amazon.com/dp/B0009X3S6C",
+      "title": "Page Not Found",
+      "screenshot": "screenshots/page-1-fullpage.png",
+      "capturedAt": "2026-07-15T18:29:27.709Z",
+      "blocked": true
+    }
+  ],
+  "pageTexts": [
+    {
+      "url": "https://www.amazon.com/dp/B0009X3S6C",
+      "text": ""
+    }
+  ],
+  "reviewerNotes": [],
+  "meta": {
+    "reviewDate": "2026-07-15 18:29:35 UTC",
+    "model": "gemini-2.5-flash",
+    "sourceFile": "Sample-06---HRI-Bathroom-Grab-Bar.pdf",
+    "toolVersion": "1.0.0"
+  },
+  "needsClarification": false
+}

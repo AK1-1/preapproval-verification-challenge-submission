@@ -119,7 +119,7 @@
     {
       "id": "item-exists-with-price",
       "status": "Needs Review",
-      "note": "No page text was captured, so the existence of the item and its price could not be verified.",
+      "note": "The product page could not be captured, so it's not possible to verify if the item exists with a visible price.",
       "evidenceUrl": "",
       "quote": "",
       "label": "The item exists at the linked page, with a visible price",
@@ -128,7 +128,7 @@
     {
       "id": "not-excluded",
       "status": "Not Met",
-      "note": "The requested item, 'Laptop computer', is considered 'Computer Hardware' which is explicitly listed on the HRI exclusion list.",
+      "note": "A laptop computer is considered 'Computer Hardware', which is explicitly listed on the HRI exclusion list.",
       "evidenceUrl": "",
       "quote": "",
       "label": "Item is plausibly NOT on the IDGS/HRI exclusion list",
@@ -137,7 +137,7 @@
     {
       "id": "safety-features",
       "status": "Needs Review",
-      "note": "The form did not describe any safety features for the requested item, so there was nothing to verify on the product page.",
+      "note": "The form did not describe any safety features. The product page could not be captured, so it's not possible to verify any potential safety features.",
       "evidenceUrl": "",
       "quote": "",
       "label": "Safety features described on the form are supported by the product page",
@@ -146,7 +146,7 @@
     {
       "id": "price-within-cap",
       "status": "Needs Review",
-      "note": "No page text was captured, so the item's price could not be determined or compared against the $1,500 cap.",
+      "note": "The product page could not be captured, so it's not possible to verify the item's price against the $1,500 cap.",
       "evidenceUrl": "",
       "quote": "",
       "label": "Item price is within the $1,500/budget-year cap",
@@ -157,7 +157,7 @@
     "formRate": "",
     "websiteRate": "not published",
     "verdict": "not published",
-    "note": "No website pages were captured, so no rate could be found or compared."
+    "note": "No website pages were captured, so no rate could be found on the website to compare with the form rate."
   },
   "internalItems": [
     {
@@ -217,7 +217,7 @@
       "url": "https://www.amazon.com/dp/B08N5WRWNW",
       "title": "Page Not Found",
       "screenshot": "screenshots/page-1-fullpage.png",
-      "capturedAt": "2026-07-15T15:39:01.959Z",
+      "capturedAt": "2026-07-15T18:24:11.706Z",
       "blocked": true
     }
   ],
@@ -229,7 +229,7 @@
   ],
   "reviewerNotes": [],
   "meta": {
-    "reviewDate": "2026-07-15 15:39:08 UTC",
+    "reviewDate": "2026-07-15 18:24:19 UTC",
     "model": "gemini-2.5-flash",
     "sourceFile": "Sample-07---HRI-Laptop---exclusion-test.pdf",
     "toolVersion": "1.0.0"

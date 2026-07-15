@@ -81,7 +81,7 @@ THE REQUEST (from the application form):
 - Participant age: ${parsed.participantAge}
 - Category: ${category.label}
 ${appealBlock}${capsBlock}${exclusionBlock}
-CHECKS TO EVALUATE (one finding per id, in order):
+CHECKS TO EVALUATE (return EXACTLY one finding for every id below, in order — never omit or merge them, even when another section covers similar ground):
 ${checksDesc}
 
 CAPTURED WEBSITE TEXT (the ONLY evidence you may use):
@@ -103,7 +103,21 @@ STRICT RULES — violating them corrupts an audit file:
   const findings = [];
 
   for (const check of category.webChecks) {
-    let f = byId.get(check.id) || {
+    let f = byId.get(check.id);
+    // If the model omitted a rate-comparison finding, derive it
+    // deterministically from its own rateComparison verdict instead of
+    // producing a contradictory "Needs Review".
+    if (!f && check.type === "rate-comparison" && result.rateComparison?.verdict) {
+      const v = result.rateComparison.verdict;
+      f = {
+        id: check.id,
+        status: v === "matches application exactly" ? "Met" : v === "differs" ? "Not Met" : "Needs Review",
+        note: `${result.rateComparison.note} (Derived from the rate comparison: form "${result.rateComparison.formRate}" vs website "${result.rateComparison.websiteRate}" — ${v}.)`,
+        quote: "",
+        derivedFromRateComparison: true,
+      };
+    }
+    f = f || {
       id: check.id,
       status: "Needs Review",
       note: "The evaluator returned no finding for this item.",
@@ -127,9 +141,10 @@ STRICT RULES — violating them corrupts an audit file:
     }
 
     // Anti-hallucination: verify the quote really appears in captured text.
-    // Exclusion checks are judged from the form's own item name, so they are
-    // exempt from the webpage-quote requirement.
-    if ((f.status === "Met" || f.status === "Not Met") && f.type !== "needs-document" && f.type !== "exclusion-check") {
+    // Exclusion checks are judged from the form's own item name, and findings
+    // derived from the rate comparison carry its rates instead of a quote, so
+    // both are exempt from the webpage-quote requirement.
+    if ((f.status === "Met" || f.status === "Not Met") && f.type !== "needs-document" && f.type !== "exclusion-check" && !f.derivedFromRateComparison) {
       const q = normalize(f.quote);
       if (!q || q.length < 3 || !allText.includes(q)) {
         f.originalStatus = f.status;

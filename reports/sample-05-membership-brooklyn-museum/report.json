@@ -1,0 +1,187 @@
+{
+  "id": "sample-05-membership-brooklyn-museum",
+  "parsed": {
+    "category": "membership",
+    "participantName": "Miriam T.",
+    "requestedItem": "Individual Membership",
+    "providerName": "Brooklyn Museum",
+    "url": "https://www.brooklynmuseum.org/join",
+    "statedFee": "$80.00",
+    "checklistAnswers": [
+      {
+        "question": "Is Health-club/Organizational Membership currently approved in the budget?",
+        "answer": "YES"
+      },
+      {
+        "question": "Does the membership provide opportunity for community inclusion?",
+        "answer": "YES"
+      },
+      {
+        "question": "Does the membership accommodate the individual's health and/or safety needs?",
+        "answer": "YES"
+      },
+      {
+        "question": "Does the membership increase independence or substitute for human assistance?",
+        "answer": "YES"
+      },
+      {
+        "question": "Is the membership provided exclusively toward the benefit of the participant? (not family)",
+        "answer": "YES"
+      },
+      {
+        "question": "Is the organization open to the public and not a private/invitation-only club?",
+        "answer": "YES"
+      }
+    ],
+    "missingInfo": [],
+    "appeal": null,
+    "brokerName": "Sarah Klein",
+    "durationPerSession": "",
+    "fiCoordinator": "Leah Stern",
+    "formTitle": "Health Club / Organizational Memberships Pre-approval Checklist",
+    "justification": "",
+    "lpDate": "01/30/2026",
+    "participantAge": "35",
+    "safetyFeatures": "",
+    "subjectArea": "",
+    "valuedOutcome": "Miriam will engage in community and cultural activities through an individual museum membership open to the public."
+  },
+  "category": {
+    "key": "membership",
+    "label": "Health-Club / Organizational Membership",
+    "detectHints": [
+      "Membership",
+      "memberships preapproval"
+    ],
+    "rateFieldLabel": "Membership Fee",
+    "webChecks": [
+      {
+        "id": "open-to-public",
+        "label": "Organization is open to the public (not private/invitation-only)",
+        "criteria": "Anyone from the general public must be able to join (public 'join'/'sign up' flow, published membership tiers). Private or invitation-only clubs fail."
+      },
+      {
+        "id": "published-fee",
+        "label": "Membership fee is published",
+        "criteria": "A concrete membership price (monthly or yearly) must be publicly visible."
+      },
+      {
+        "id": "fee-match",
+        "label": "Published membership fee matches the form (yearly/monthly)",
+        "type": "rate-comparison",
+        "criteria": "Compare the membership fee on the application against the published amount, being careful about monthly vs yearly. Verdict: matches application exactly / differs / not published."
+      }
+    ]
+  },
+  "findings": [
+    {
+      "id": "open-to-public",
+      "status": "Met",
+      "note": "The Brooklyn Museum website clearly presents various membership levels with options to \"Join or renew\", indicating it is open to the public.",
+      "evidenceUrl": "https://www.brooklynmuseum.org/support/membership",
+      "quote": "BECOME A MEMBER",
+      "label": "Organization is open to the public (not private/invitation-only)",
+      "type": "web-check",
+      "quoteVerified": true,
+      "targetedScreenshot": "screenshots/evidence-open-to-public.png",
+      "targetedCapturedAt": "2026-07-15T18:24:37.025Z"
+    },
+    {
+      "id": "published-fee",
+      "status": "Met",
+      "note": "The website explicitly lists an annual fee of $80 for an Individual Membership.",
+      "evidenceUrl": "https://www.brooklynmuseum.org/support/membership",
+      "quote": "$80",
+      "label": "Membership fee is published",
+      "type": "web-check",
+      "quoteVerified": true,
+      "targetedScreenshot": "screenshots/evidence-published-fee.png",
+      "targetedCapturedAt": "2026-07-15T18:24:38.180Z"
+    },
+    {
+      "id": "fee-match",
+      "status": "Met",
+      "note": "The website lists an Individual Membership for $80, which matches the requested fee on the form.",
+      "evidenceUrl": "https://www.brooklynmuseum.org/support/membership",
+      "quote": "$80",
+      "label": "Published membership fee matches the form (yearly/monthly)",
+      "type": "rate-comparison",
+      "quoteVerified": true,
+      "targetedScreenshot": "screenshots/evidence-fee-match.png",
+      "targetedCapturedAt": "2026-07-15T18:24:39.290Z"
+    }
+  ],
+  "rateComparison": {
+    "formRate": "$80.00",
+    "websiteRate": "$80",
+    "verdict": "matches application exactly",
+    "note": "The website lists an Individual Membership for $80, which matches the $80.00 stated on the application form."
+  },
+  "internalItems": [
+    {
+      "question": "Is Health-club/Organizational Membership currently approved in the budget?",
+      "formAnswer": "YES",
+      "websiteVerifiable": false
+    },
+    {
+      "question": "Does the membership provide opportunity for community inclusion?",
+      "formAnswer": "YES",
+      "websiteVerifiable": false
+    },
+    {
+      "question": "Does the membership accommodate the individual's health and/or safety needs?",
+      "formAnswer": "YES",
+      "websiteVerifiable": false
+    },
+    {
+      "question": "Does the membership increase independence or substitute for human assistance?",
+      "formAnswer": "YES",
+      "websiteVerifiable": false
+    },
+    {
+      "question": "Is the membership provided exclusively toward the benefit of the participant? (not family)",
+      "formAnswer": "YES",
+      "websiteVerifiable": false
+    },
+    {
+      "question": "Is the organization open to the public and not a private/invitation-only club?",
+      "formAnswer": "YES",
+      "websiteVerifiable": true
+    }
+  ],
+  "appealAssessment": "",
+  "pages": [
+    {
+      "url": "https://www.brooklynmuseum.org/join",
+      "title": "Page Not Found · Brooklyn Museum",
+      "screenshot": "screenshots/page-1-fullpage.png",
+      "capturedAt": "2026-07-15T18:24:13.318Z",
+      "blocked": false
+    },
+    {
+      "url": "https://www.brooklynmuseum.org/support/membership",
+      "title": "Become a Member · Brooklyn Museum",
+      "screenshot": "screenshots/page-2-fullpage.png",
+      "capturedAt": "2026-07-15T18:24:22.119Z",
+      "blocked": false
+    }
+  ],
+  "pageTexts": [
+    {
+      "url": "https://www.brooklynmuseum.org/join",
+      "text": "Get tickets\n\nBecome a Member\n\nVisit\n\nWhat’s on\n\nArt\n\nLearn\n\nSupport\n\nShop\n\nWeird—that page isn‘t here.\n\nCheck out exhibitions\nExplore all events\nFooter\n200 Eastern Parkway\nBrooklyn, New York 11238-6052\n718.638.5000\nContact us\n\nOpen today 11 am–6 pm\n\nView hours\n\nOur mission\nAbout us\nOur values\nResearch\nCommunity\nCareers\nWho’s visiting\nAdults\nMembers\nFamilies and kids\nTeens\nGet involved\nBecome a Member\nDonate\nCorporate partnerships\nUniversity memberships\nPrivate events + rentals\nFollow\nNewsletters\nStories\nPress\nSign up for our newsletter\nSubscribe to stay up-to-date on our exhibitions, programs, and much more.\nThe Brooklyn Museum stands on land that is part of the unceded ancestral homeland of the Lenape (Delaware) people.\nTerms of use\nPrivacy policy\nFilm and photo shoots\nImage services"
+    },
+    {
+      "url": "https://www.brooklynmuseum.org/support/membership",
+      "text": "Get tickets\n\nBecome a Member\n\nVisit\n\nWhat’s on\n\nArt\n\nLearn\n\nSupport\n\nShop\n\nSUPPORT\nDONATE\nMEMBERSHIP\nPATRON GROUPS\nPLANNED GIVING\nBECOME A MEMBER\n\nYou belong here. Members help make possible the great art, big ideas, and courageous conversations that can only happen at the Brooklyn Museum.\n\nSee the benefits\nCurrent Members\nDID WE MENTION THE PERKS?\nEveryone who comes to the Museum is a VIP. But Members enjoy next-level benefits:\nFree admission\n\nReserve free, untimed tickets to the Museum, including special exhibitions. Just show your digital Membership card (physical card available on request).\n\nEarly and exclusive access\n\nYou’ll be on the list for exclusive previews, viewing hours, and programs. Get first dibs on tickets to special exhibitions, First Saturdays (skip the line!), the Brooklyn Artists Ball After Party, and more.\n\nDiscounts\n\nSave 10% on dining, shopping, tours, and art classes; 20% on your first Shop purchase; 30% on admission for additional guests; and 40% on ticketed programs.\n\nStay up to date\n\nYou’ll receive Members-only emails with upcoming events, opportunities, and Member spotlights.\n\nReciprocal benefits\n\nScore free admission and discounted purchases at 40+ partner museums when you join at the Enthusiast level and above. Learn more about reciprocal benefits.\n\nSpecial programs\n\nEnjoy Members-only programming and behind-the-scenes insights at any level, plus additional opportunities to hear from curators, artists, and experts at the Enthusiast level and above.\n\nMEMBERSHIP LEVELS\nWe’re excited to introduce new levels and benefits for 2025! Already a Member and wondering how this will affect your Membership? Visit the Member Hub for answers.\n\nAdults 65+ and visitors with disabilities can save $10 on annual Individual  and Dual  Memberships.\nIndividual\nDual\nEnthusiast\nAdvocate\nFree admission\nIncludes ticketed exhibitions\n\n1 Member\n\n2 Members, 4 children\n\n2 Members, 4 children\n\n2 Members, 4 children\n\nGuests\n\n2 guests\n\n2 guests\n\nEarly access\nAs listed above\nExclusive invites\n\nPreviews and viewing hours\n\nPreviews and viewing hours\n\nPreviews and viewing hours; walking tours\n\nAll Enthusiast invites plus curator tours and select VIP openings\n\nDiscounts\nAs listed above\nReciprocal benefits\nAs listed above\n\n$80\n\nJoin or renew\n\n$135\n\nJoin or renew\n\n$300\n\nJoin or renew\n\n$600\n\nJoin or renew\n\nBecome a Groundbreaker\n\nDeepen your engagement and impact while enjoying unique benefits, including select Director’s Circle events. This Membership level now also includes annual invitations to two artist events, such as studio tours or gallery visits, and a 30% discount on admission for additional guests.\n\nJoin or renew\nDonate to the Annual Fund\n\nYour generous support makes possible the great art, inspiring encounters, and courageous conversations that can only happen here.\n\nGive today\nAlready a Member?\n\nWelcome back! Log in to manage your Membership  or visit the Member Hub to reserve tickets, see upcoming events, and maximize your perks.\n\nVisit the Member Hub\n\nJoin the Kids’ Club\n\nLet your little art enthusiast (ages 12 and under) unlock a world of creativity and hands-on museum adventures—all with their very own Junior Membership card! At just $60, this add-on includes a year of monthly Member Kids’ Club Mornings, among other benefits.\n\nAdd to your Membership\n\nGive the gift of Membership\n\nShare transformative art and community with friends and loved ones.\n\nGet started\n\nFrequently asked questions\n\nOther questions about Membership? Museum staff are here to help. Read our extended FAQ, or contact membership@​brooklynmuseum.​org  or 718.501.6326.\n\nWhen will I receive my Membership card?\nHow can I access my online account?\nHow do I apply my Member discount to purchases, both in person and online?\nCan I give a Membership as a gift?\nCan I designate a secondary Membership cardholder?\nFooter\n200 Eastern Parkway\nBrooklyn, New York 11238-6052\n718.638.5000\nContact us\n\nOpen today 11 am–6 pm\n\nView hours\n\nOur mission\nAbout us\nOur values\nResearch\nCommunity\nCareers\nWho’s visiting\nAdults\nMembers\nFamilies and kids\nTeens\nGet involved\nBecome a Member\nDonate\nCorporate partnerships\nUniversity memberships\nPrivate events + rentals\nFollow\nNewsletters\nStories\nPress\nSign up for our newsletter\nSubscribe to stay up-to-date on our exhibitions, programs, and much more.\nThe Brooklyn Museum stands on land that is part of the unceded ancestral homeland of the Lenape (Delaware) people.\nTerms of use\nPrivacy policy\nFilm and photo shoots\nImage services"
+    }
+  ],
+  "reviewerNotes": [],
+  "meta": {
+    "reviewDate": "2026-07-15 18:24:40 UTC",
+    "model": "gemini-2.5-flash",
+    "sourceFile": "Sample-05---Membership-Brooklyn-Museum.pdf",
+    "toolVersion": "1.0.0"
+  },
+  "needsClarification": false
+}
