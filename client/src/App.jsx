@@ -31,7 +31,9 @@ function Dashboard({ onOpenReport, onRunStarted }) {
     api("/api/samples").then(setSamples).catch((e) => setError(e.message));
     api("/api/reports").then(setReports).catch((e) => setError(e.message));
   }, []);
-  useEffect(refresh, [refresh]);
+  useEffect(() => {
+    refresh();
+  }, [refresh]);
 
   const run = async (file) => {
     setError("");
@@ -164,7 +166,12 @@ function ReportView({ reportId, onBack, onRunStarted }) {
     () => api(`/api/reports/${reportId}`).then(setReport).catch((e) => setError(e.message)),
     [reportId]
   );
-  useEffect(load, [load]);
+  // Wrap: load returns a Promise, and a value returned from useEffect is
+  // treated as the cleanup function — returning a Promise crashes React on
+  // unmount ("destroy is not a function"), blanking the whole app.
+  useEffect(() => {
+    load();
+  }, [load]);
 
   if (error) return <div className="error">{error}</div>;
   if (!report) return <div className="hint">Loading report…</div>;
