@@ -127,13 +127,16 @@ Any YES/NO question on a form that doesn't match a webCheck is automatically cla
 - **PHI handling:** sample data here is synthetic. In production, participant fields (name, age, outcomes) would be redacted/minimized before any third-party API call, or the LLM would run in a HIPAA-eligible environment (e.g. Gemini on Vertex AI with a BAA); evidence bundles would live in access-controlled storage with retention policies.
 - Queueing + persistence for jobs, user auth/roles, audit logging of reviewer overrides (partially present — overrides are recorded in the report), retry/monitoring, golden-set regression tests against the reviewer key, and legal review of site terms for automated access.
 
-## The committed demonstration runs — all 7 form categories
+## The committed demonstration runs — all 10 samples, all 7 form categories
 
 | Sample | What it demonstrates | Result in the committed report |
 |---|---|---|
 | 01 — Community Class (GallopNYC) | clearly-published evidence | fees, public status etc. Match/Pass with highlighted captures; $80 rate "matches application exactly"; unpublished schedule honestly flagged |
+| 02 — Community Class (Gracie Barra) | franchise site, unpublished fees | fees/schedule Needs Review — the very denial that Sample 10 appeals |
 | 03 — Coaching (92NY Parenting) | **ambiguous / gated pricing** | pricing sits behind a session-gated page → every check honestly Needs Review |
 | 04 — Membership (Planet Fitness) | membership fee comparison | all three membership checks Match/Pass; published fee matches the form exactly |
+| 05 — Membership (Brooklyn Museum) | straightforward membership | open-to-public, published fee, and fee match all Match/Pass |
+| 06 — HRI (bathroom grab bar) | the item HRI exists for | exclusion check Match/Pass (home-safety hardware is not excluded); Amazon-blocked price checks honestly Needs Review |
 | 07 — HRI (laptop) | **exclusion-list trap** | "Computer Hardware" → flagged **No Match/Fail** even though Amazon blocks automated browsers |
 | 08 — OTPS (weighted blanket) | bot-blocked product page | exclusion check still resolves (Match/Pass — a blanket isn't excluded); price checks Needs Review with the block page captured as evidence |
 | 09 — Transition Program (LaGuardia CC) | needs-document item | noncredit/skill-building and not-OPWDD-location Match/Pass; background-screening auto-flagged "needs document"; fees Needs Review |
