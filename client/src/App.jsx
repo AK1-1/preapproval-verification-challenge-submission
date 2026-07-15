@@ -207,7 +207,13 @@ function ReportView({ reportId, onBack, onRunStarted }) {
             </tbody>
           </table>
           {(parsed.missingInfo || []).length > 0 && (
-            <div className="error">⚠ {parsed.missingInfo.join(" · ")}</div>
+            <div className="error">
+              ⚠ {parsed.missingInfo.join(" · ")}
+              <div className="hint">
+                Answer in the chat sidebar — e.g. “Use https://provider.example.com as the website and re-run” or
+                “Treat this as a coaching form and re-run”.
+              </div>
+            </div>
           )}
           <p>
             <a className="link" href={`/reports/${reportId}/index.html`} target="_blank" rel="noreferrer">

@@ -3,7 +3,7 @@ import fs from "fs";
 import { Type } from "@google/genai";
 import { generateJson } from "./lib/gemini.js";
 import { generateReport, loadReport } from "./reportGenerator.js";
-import { ROOT, SAMPLES_DIR, UPLOADS_DIR } from "./lib/config.js";
+import { ROOT, SAMPLES_DIR, UPLOADS_DIR, categoryKeys } from "./lib/config.js";
 import { displayStatus } from "./lib/labels.js";
 
 const VALID_STATUSES = ["Met", "Not Met", "Needs Review"];
@@ -19,11 +19,13 @@ const chatSchema = {
         properties: {
           type: {
             type: Type.STRING,
-            description: "set_status | add_note | add_finding_note | rerun | none",
+            description: "set_status | add_note | add_finding_note | rerun | rerun_with | none",
           },
           findingId: { type: Type.STRING, description: "webCheck id for set_status / add_finding_note" },
           status: { type: Type.STRING, description: "Met | Not Met | Needs Review (for set_status)" },
           text: { type: Type.STRING, description: "note text (for add_note / add_finding_note), or the reviewer's reason" },
+          url: { type: Type.STRING, description: "rerun_with only: the website URL the reviewer supplied, exactly as given" },
+          category: { type: Type.STRING, description: "rerun_with only: the checklist category key the reviewer chose" },
         },
         required: ["type"],
       },
@@ -72,6 +74,31 @@ function validateAction(state, action) {
     }
     case "rerun":
       return { type: "rerun", description: "Re-run the entire website verification (replaces this report)" };
+    case "rerun_with": {
+      // Reviewer answers a clarification: supplies the missing/corrected URL
+      // and/or picks the checklist category, then the review re-runs.
+      const out = { type: "rerun_with" };
+      if (action.url) {
+        let url = String(action.url).trim();
+        if (!/^https?:\/\//i.test(url)) url = "https://" + url;
+        try {
+          new URL(url);
+        } catch {
+          return null;
+        }
+        out.url = url;
+      }
+      if (action.category) {
+        if (!categoryKeys().includes(action.category)) return null;
+        out.category = action.category;
+      }
+      if (!out.url && !out.category) return null;
+      const parts = [];
+      if (out.url) parts.push(`website ${out.url}`);
+      if (out.category) parts.push(`checklist category "${out.category}"`);
+      out.description = `Re-run the verification using ${parts.join(" and ")} (replaces this report)`;
+      return out;
+    }
     default:
       return null;
   }
@@ -99,7 +126,11 @@ ${message}
 CURRENT REPORT:
 Participant: ${state.parsed.participantName}; requested: ${state.parsed.requestedItem}; provider: ${state.parsed.providerName}; stated fee: ${state.parsed.statedFee}.
 Rate comparison verdict: ${state.rateComparison?.verdict} (form: ${state.rateComparison?.formRate}, website: ${state.rateComparison?.websiteRate}).
-Findings:
+${
+  (state.parsed.missingInfo || []).length
+    ? `PENDING CLARIFICATIONS (the reviewer can answer these via rerun_with):\n${state.parsed.missingInfo.map((m) => `- ${m}`).join("\n")}\n`
+    : ""
+}Findings:
 ${findingsDesc}
 
 Available actions:
@@ -107,7 +138,8 @@ Available actions:
   NOTE: the UI shows Met as "Match/Pass" and Not Met as "No Match/Fail" — when the reviewer says "match", "pass", "fail", "no match", or similar, map it to the canonical value (Met / Not Met / Needs Review) in the action.
 - add_finding_note: append a note to one finding (findingId + text).
 - add_note: append a general reviewer note to the report (text).
-- rerun: re-run the whole website verification.
+- rerun_with: re-run using reviewer-supplied info — use this when the reviewer answers a clarification or corrects the form data by giving a website URL (url) and/or picking the checklist category (category, one of: ${categoryKeys().join(", ")}). Only use values the reviewer explicitly stated; never invent a URL.
+- rerun: re-run the whole website verification unchanged. NEVER use plain rerun when the reviewer supplied a URL or category — that would silently discard their correction; use rerun_with.
 - none: no change requested.
 
 STRICT RULES:
@@ -156,11 +188,14 @@ export function applyActions(reportDir, actions, { startJob } = {}) {
       state.reviewerNotes = state.reviewerNotes || [];
       state.reviewerNotes.push({ text: action.text, addedAt: stamp });
       applied.push(action.description);
-    } else if (action.type === "rerun" && startJob) {
+    } else if ((action.type === "rerun" || action.type === "rerun_with") && startJob) {
       const src = findSourcePdf(state.meta?.sourceFile);
       if (src) {
-        rerunJobId = startJob(src);
-        applied.push("Re-run started");
+        rerunJobId = startJob(src, {
+          urlOverride: action.url,
+          categoryOverride: action.category,
+        });
+        applied.push(action.type === "rerun_with" ? action.description : "Re-run started");
       } else {
         applied.push("Re-run failed: source PDF not found");
       }

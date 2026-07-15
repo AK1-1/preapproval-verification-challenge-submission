@@ -1,0 +1,200 @@
+{
+  "id": "sample-08-otps-weighted-blanket",
+  "parsed": {
+    "category": "otps",
+    "participantName": "Shira L.",
+    "requestedItem": "Weighted blanket (therapeutic)",
+    "providerName": "amazon.com (inferred from item link)",
+    "url": "https://www.amazon.com/dp/B075YQXZLK",
+    "statedFee": "",
+    "checklistAnswers": [
+      {
+        "question": "Is 'Other goods & services that increase independence' approved in the budget?",
+        "answer": "NO"
+      },
+      {
+        "question": "Is 'Other goods & services that increase health and safety' approved in the budget?",
+        "answer": "YES"
+      },
+      {
+        "question": "Is the item related to a need or goal identified in the Life Plan?",
+        "answer": "YES"
+      },
+      {
+        "question": "Will the item increase the independence and/or health and safety of the individual?",
+        "answer": "YES"
+      },
+      {
+        "question": "Is the item exclusively needed for the participant?",
+        "answer": "YES"
+      },
+      {
+        "question": "Is the item on the OTPS exclusion list? (see guidelines)",
+        "answer": "NO"
+      },
+      {
+        "question": "Can the item be funded through other sources?",
+        "answer": "NO"
+      },
+      {
+        "question": "Was the same item bought already in this budget year?",
+        "answer": "NO"
+      }
+    ],
+    "missingInfo": [],
+    "appeal": null,
+    "brokerName": "Michael Ross",
+    "durationPerSession": "",
+    "fiCoordinator": "Leah Stern",
+    "formTitle": "Other Than Personal Services (OTPS) Pre-Approval Form",
+    "justification": "A weighted blanket helps Shira with sensory regulation and sleep, supporting her health and safety at home.",
+    "lpDate": "03/11/2026",
+    "participantAge": "27",
+    "safetyFeatures": "Breathable fabric; evenly distributed weight; sized to the individual",
+    "subjectArea": "",
+    "valuedOutcome": "Shira will improve sleep and self-regulation to participate more fully in daily activities."
+  },
+  "category": {
+    "key": "otps",
+    "label": "OTPS (Other Than Personal Services)",
+    "detectHints": [
+      "OTPS",
+      "Other Than Personal Services"
+    ],
+    "rateFieldLabel": "Item price",
+    "caps": {
+      "perBudgetYear": 3000
+    },
+    "capNotes": [
+      "Capped at $3,000 per budget year."
+    ],
+    "exclusionList": [
+      "Cable TV",
+      "Common household supplies",
+      "Rental cars",
+      "Legal fees",
+      "Co-pays",
+      "Experimental therapies"
+    ],
+    "webChecks": [
+      {
+        "id": "item-exists-with-price",
+        "label": "The item exists at the linked page, with a visible price",
+        "criteria": "The linked product page must show the requested item with a concrete visible price."
+      },
+      {
+        "id": "not-excluded",
+        "label": "Item is plausibly NOT on the OTPS exclusion list",
+        "type": "exclusion-check",
+        "criteria": "Judge the item against the OTPS exclusion list. When in doubt, Needs Review."
+      },
+      {
+        "id": "price-within-cap",
+        "label": "Item price is within the $3,000/budget-year cap",
+        "type": "cap-check",
+        "criteria": "Compare the visible product price against the $3,000 per budget year cap."
+      }
+    ]
+  },
+  "findings": [
+    {
+      "id": "item-exists-with-price",
+      "status": "Needs Review",
+      "note": "No page text was captured, so the item's existence and price could not be verified.",
+      "evidenceUrl": "",
+      "quote": "",
+      "label": "The item exists at the linked page, with a visible price",
+      "type": "web-check"
+    },
+    {
+      "id": "not-excluded",
+      "status": "Met",
+      "note": "The requested item, 'Weighted blanket (therapeutic)', is not on the OTPS exclusion list.",
+      "evidenceUrl": "",
+      "quote": "",
+      "label": "Item is plausibly NOT on the OTPS exclusion list",
+      "type": "exclusion-check"
+    },
+    {
+      "id": "price-within-cap",
+      "status": "Needs Review",
+      "note": "No page text was captured, so the item's price could not be verified against the $3,000 cap.",
+      "evidenceUrl": "",
+      "quote": "",
+      "label": "Item price is within the $3,000/budget-year cap",
+      "type": "cap-check"
+    }
+  ],
+  "rateComparison": {
+    "formRate": "",
+    "websiteRate": "not published",
+    "verdict": "not published",
+    "note": "No page text was captured, so no rate could be found on the website."
+  },
+  "internalItems": [
+    {
+      "question": "Is 'Other goods & services that increase independence' approved in the budget?",
+      "formAnswer": "NO",
+      "websiteVerifiable": false
+    },
+    {
+      "question": "Is 'Other goods & services that increase health and safety' approved in the budget?",
+      "formAnswer": "YES",
+      "websiteVerifiable": false
+    },
+    {
+      "question": "Is the item related to a need or goal identified in the Life Plan?",
+      "formAnswer": "YES",
+      "websiteVerifiable": false
+    },
+    {
+      "question": "Will the item increase the independence and/or health and safety of the individual?",
+      "formAnswer": "YES",
+      "websiteVerifiable": false
+    },
+    {
+      "question": "Is the item exclusively needed for the participant?",
+      "formAnswer": "YES",
+      "websiteVerifiable": false
+    },
+    {
+      "question": "Is the item on the OTPS exclusion list? (see guidelines)",
+      "formAnswer": "NO",
+      "websiteVerifiable": false
+    },
+    {
+      "question": "Can the item be funded through other sources?",
+      "formAnswer": "NO",
+      "websiteVerifiable": false
+    },
+    {
+      "question": "Was the same item bought already in this budget year?",
+      "formAnswer": "NO",
+      "websiteVerifiable": false
+    }
+  ],
+  "appealAssessment": "",
+  "pages": [
+    {
+      "url": "https://www.amazon.com/dp/B075YQXZLK",
+      "title": "Page Not Found",
+      "screenshot": "screenshots/page-1-fullpage.png",
+      "capturedAt": "2026-07-15T17:37:50.221Z",
+      "blocked": true
+    }
+  ],
+  "pageTexts": [
+    {
+      "url": "https://www.amazon.com/dp/B075YQXZLK",
+      "text": ""
+    }
+  ],
+  "reviewerNotes": [],
+  "meta": {
+    "reviewDate": "2026-07-15 17:37:55 UTC",
+    "model": "gemini-2.5-flash",
+    "sourceFile": "Sample-08---OTPS-Weighted-Blanket.pdf",
+    "toolVersion": "1.0.0"
+  },
+  "needsClarification": false
+}

@@ -1,0 +1,187 @@
+{
+  "id": "sample-03-coaching-92ny-parenting",
+  "parsed": {
+    "category": "coaching",
+    "participantName": "Chaim D.",
+    "requestedItem": "Coaching",
+    "providerName": "92NY – Parenting & Family Center",
+    "url": "https://www.92ny.org/parenting-and-family",
+    "statedFee": "Fee per Class: $50, Fee per Course: $400",
+    "checklistAnswers": [
+      {
+        "question": "Is coaching education currently approved in the budget?",
+        "answer": "BLANK"
+      },
+      {
+        "question": "Is the individual over 18?",
+        "answer": "YES"
+      },
+      {
+        "question": "Does the coaching address the individual's goals being worked on in the LP?",
+        "answer": "YES"
+      },
+      {
+        "question": "Can the coaching program be funded by other public programs?",
+        "answer": "NO"
+      }
+    ],
+    "missingInfo": [],
+    "appeal": null,
+    "brokerName": "Michael Ross",
+    "durationPerSession": "",
+    "fiCoordinator": "Leah Stern",
+    "formTitle": "Coaching for Parents/Spouse Pre-approval Form",
+    "justification": "Goal 2.1 (communication) and Goal 2.3 (daily-living skills).",
+    "lpDate": "04/01/2026",
+    "participantAge": "28",
+    "safetyFeatures": "",
+    "subjectArea": "",
+    "valuedOutcome": "Support Chaim's parents in strategies that help Chaim achieve the communication and daily-living goals in his Life Plan."
+  },
+  "category": {
+    "key": "coaching",
+    "label": "Coaching (for Parents/Spouse)",
+    "detectHints": [
+      "Coaching Preapproval",
+      "coaching"
+    ],
+    "rateFieldLabel": "Fee per Course",
+    "caps": {
+      "groupClassPerSession": 55,
+      "privateClassPerSession": 111,
+      "programPerYear": 500
+    },
+    "capNotes": [
+      "Fee sanity-check: <= $55 per group class / <= $111 per private class; program capped at $500/year."
+    ],
+    "webChecks": [
+      {
+        "id": "published-fees",
+        "label": "Published fees exist for the course/class",
+        "criteria": "A concrete public price for the course/class must be visible on the site."
+      },
+      {
+        "id": "fee-within-caps",
+        "label": "Stated fee is within program caps ($55 group / $111 private, $500/year)",
+        "type": "cap-check",
+        "criteria": "Compare the fee stated on the form (and the published fee if found) against the caps: $55 per group class, $111 per private class, $500 per year program cap. Flag any amount exceeding a cap."
+      },
+      {
+        "id": "educational-content",
+        "label": "Content is a genuine educational/coaching opportunity",
+        "criteria": "The offering must be an educational course/coaching (parenting class, family workshop...). Lodging/travel/retreat packages are excluded and fail this check."
+      },
+      {
+        "id": "fee-match",
+        "label": "Published fee matches the fee stated on the form",
+        "type": "rate-comparison",
+        "criteria": "Compare the fee on the application to the published fee. Verdict: matches application exactly / differs / not published."
+      }
+    ]
+  },
+  "findings": [
+    {
+      "id": "published-fees",
+      "status": "Needs Review",
+      "note": "No fees could be found as the page for the 92NY Parenting & Family Center returned a 404 error.",
+      "evidenceUrl": "https://www.92ny.org/parenting-and-family",
+      "quote": "",
+      "label": "Published fees exist for the course/class",
+      "type": "web-check"
+    },
+    {
+      "id": "fee-within-caps",
+      "status": "Needs Review",
+      "note": "The stated fees on the form ($50 per class, $400 per course) are within the program caps ($55 per group class, $111 per private class, $500 per year program cap). [Auto-downgraded to Needs Review: the supporting quote could not be verified verbatim in the captured page text.]",
+      "evidenceUrl": "",
+      "quote": "Fee per Class: $50, Fee per Course: $400",
+      "label": "Stated fee is within program caps ($55 group / $111 private, $500/year)",
+      "type": "cap-check",
+      "originalStatus": "Met",
+      "quoteVerified": false
+    },
+    {
+      "id": "educational-content",
+      "status": "Needs Review",
+      "note": "The requested item, 'Coaching (for Parents/Spouse)', is a genuine educational/coaching opportunity. [Auto-downgraded to Needs Review: the supporting quote could not be verified verbatim in the captured page text.]",
+      "evidenceUrl": "",
+      "quote": "",
+      "label": "Content is a genuine educational/coaching opportunity",
+      "type": "web-check",
+      "originalStatus": "Met",
+      "quoteVerified": false
+    },
+    {
+      "id": "fee-match",
+      "status": "Needs Review",
+      "note": "No published fees could be found on the website to compare with the stated form fees, as the page returned a 404 error.",
+      "evidenceUrl": "https://www.92ny.org/parenting-and-family",
+      "quote": "",
+      "label": "Published fee matches the fee stated on the form",
+      "type": "rate-comparison"
+    }
+  ],
+  "rateComparison": {
+    "formRate": "Fee per Class: $50, Fee per Course: $400",
+    "websiteRate": "not published",
+    "verdict": "not published",
+    "note": "The website page for the Parenting & Family Center returned a 404 error, so no rates could be found to compare with the application."
+  },
+  "internalItems": [
+    {
+      "question": "Is coaching education currently approved in the budget?",
+      "formAnswer": "BLANK",
+      "websiteVerifiable": false
+    },
+    {
+      "question": "Is the individual over 18?",
+      "formAnswer": "YES",
+      "websiteVerifiable": false
+    },
+    {
+      "question": "Does the coaching address the individual's goals being worked on in the LP?",
+      "formAnswer": "YES",
+      "websiteVerifiable": false
+    },
+    {
+      "question": "Can the coaching program be funded by other public programs?",
+      "formAnswer": "NO",
+      "websiteVerifiable": false
+    }
+  ],
+  "appealAssessment": "",
+  "pages": [
+    {
+      "url": "https://www.92ny.org/parenting-and-family",
+      "title": "404 | 92NY",
+      "screenshot": "screenshots/page-1-fullpage.png",
+      "capturedAt": "2026-07-15T17:37:10.503Z",
+      "blocked": false
+    },
+    {
+      "url": "https://my.92ny.org/components/sharedsession?actionUrl=https%3a%2f%2fwww.92ny.org%2ftnew%2freceive&returnUrl=https%3a%2f%2fwww.92ny.org%2fchildren-family%2fparenting-center",
+      "title": "",
+      "screenshot": "screenshots/page-2-fullpage.png",
+      "capturedAt": "2026-07-15T17:37:19.220Z",
+      "blocked": true
+    }
+  ],
+  "pageTexts": [
+    {
+      "url": "https://www.92ny.org/parenting-and-family",
+      "text": "Skip to Main Content\nEvents\nClasses\nProgram Areas\n92NY at a Glance\nAbout 92NY\nSUPPORT 92NY\nPage Not Found\n\nWe couldn't find the page you were looking for. Try our search box above! Why not give our search a try instead?\n\n \n SEARCH \n\nIf you need additional help or would like to purchase programs through our Box Office, please call 212.415.5500 during our normal hours of operation.\n\nStay up to date with 92ny latest news & events\nCLOSE\nSIGN UP\n\nThe 92nd Street Y, New York\n1395 Lexington Avenue\n(between 91st & 92nd streets)\nNew York, NY 10128\n\nEmail Us\n\nEVENTS\nCLASSES\nSUPPORT 92NY\nGENERAL INFO\nAbout us\nCareers\nGift Certificates\nHealth and Fitness Schedules\nPlan Your Visit\nPress\nRentals\nScholarships\nSUPPORT US\nCorporate Sponsorship\nDonate Now\nSpecial Events\nEXPLORE OUR PROGRAMS\nBelfer Center for Innovation and Social Impact\nBronfman Center for Jewish Life\nCenter for Culture & Arts\nCenter for Children and Family\nCenter for Community\nStay in Touch\nSIGN UP\n©2026 92nd Street Young Men's and Young Women's Hebrew Association.\nAll Rights Reserved. Proudly funded by UJA-Federation of New York.\nPrivacy Policy\nFind Us on Instagram (opens in new window)\nFind Us on Facebook (opens in new window)\nFind Us on YouTube (opens in new window)\nFind Us on TikTok (opens in new window)"
+    },
+    {
+      "url": "https://my.92ny.org/components/sharedsession?actionUrl=https%3a%2f%2fwww.92ny.org%2ftnew%2freceive&returnUrl=https%3a%2f%2fwww.92ny.org%2fchildren-family%2fparenting-center",
+      "text": ""
+    }
+  ],
+  "reviewerNotes": [],
+  "meta": {
+    "reviewDate": "2026-07-15 17:37:27 UTC",
+    "model": "gemini-2.5-flash",
+    "sourceFile": "Sample-03---Coaching-92NY-Parenting.pdf",
+    "toolVersion": "1.0.0"
+  },
+  "needsClarification": false
+}
