@@ -102,6 +102,16 @@ In missingInfo, report ONLY things that would block a website review: no URL, un
     parsed.url = "https://" + parsed.url;
   }
   if (!keys.includes(parsed.category)) parsed.category = "unknown";
+  // Some forms (HRI/OTPS) have no Provider/Vendor field — derive a
+  // deterministic vendor from the item link instead of leaving it blank
+  // (or letting the model guess inconsistently).
+  if (!(parsed.providerName || "").trim() && parsed.url) {
+    try {
+      parsed.providerName = `${new URL(parsed.url).hostname.replace(/^www\./, "")} (inferred from item link)`;
+    } catch {
+      /* unparseable URL — leave blank */
+    }
+  }
   parsed.missingInfo = parsed.missingInfo || [];
   if (!parsed.url) parsed.missingInfo.push("No website URL found on the form - reviewer must supply one.");
   if (parsed.category === "unknown") parsed.missingInfo.push("Form category is ambiguous - reviewer must pick the checklist.");

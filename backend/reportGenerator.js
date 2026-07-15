@@ -188,7 +188,15 @@ export function renderHtml(state) {
 
   <div class="card">
     <h2>Internal items — not website-verifiable (left for the human reviewer)</h2>
-    <p class="small muted">These questions depend on internal data (budget, Life Plan, other funded services). The tool does not guess them; the answers shown are what was ticked on the form.</p>
+    <p class="small muted">These items depend on internal data (budget, Life Plan, other funded services). The tool does not guess them; the answers shown are what the form says.</p>
+    ${
+      parsed.valuedOutcome
+        ? `<table class="kv">
+      <tr><td>Valued outcome (from Life Plan)</td><td>${esc(parsed.valuedOutcome)}</td></tr>
+      <tr><td>Life-Plan date</td><td>${esc(parsed.lpDate)}</td></tr>
+    </table>`
+        : ""
+    }
     <div class="tablewrap">
     <table>
       <tr><th>Status</th><th>Form question</th><th>Answer on form</th></tr>

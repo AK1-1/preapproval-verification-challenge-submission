@@ -262,6 +262,12 @@ function ReportView({ reportId, onBack, onRunStarted }) {
         <div className="panel">
           <h3>Internal — not website-verifiable ({internals.length})</h3>
           <p className="hint">Left for the human reviewer; answers shown are what the form says.</p>
+          {parsed.valuedOutcome && (
+            <p>
+              <Badge status="Internal" /> Valued outcome (from Life Plan): {parsed.valuedOutcome}
+              {parsed.lpDate && <span className="hint"> — LP date {parsed.lpDate}</span>}
+            </p>
+          )}
           <ul className="internallist">
             {internals.map((i, idx) => (
               <li key={idx}>
