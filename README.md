@@ -19,7 +19,7 @@ application PDF ──► 1. PARSE (Gemini reads the form, even scans)
                         │  every capture stamped with date/time + URL
                         ▼
                     3. EVALUATE (Gemini judges each website-verifiable checklist item)
-                        │  Met / Not Met require a verbatim quote — verified
+                        │  Match/Pass and No Match/Fail require a verbatim quote — verified
                         │  programmatically against the captured text (no hallucinations)
                         ▼
                     4. TARGETED EVIDENCE (Playwright revisits, highlights the
@@ -65,7 +65,7 @@ Per the project brief (§6):
 
 - **The request at a glance** — participant, provider, item, URL, category, fee, review date.
 - **Rate comparison** — form rate vs published rate, verdict: *matches application exactly / differs / not published*.
-- **Per-criterion findings** — status (**Met / Not Met / Needs Review**), evidence URL, verbatim quote from the page, plain-language note, and a labeled targeted screenshot.
+- **Per-criterion findings** — status (**Match/Pass · No Match/Fail · Needs Review**), evidence URL, verbatim quote from the page, plain-language note, and a labeled targeted screenshot.
 - **Internal items** — the form's questions the website can't answer, clearly marked, never guessed.
 - **Evidence captures** — whole-page screenshots of every page reviewed **plus** one focused, labeled screenshot per confirmed finding. Every capture has a **burned-in banner with the capture date/time (UTC) and the URL** — the audit requirement.
 
@@ -110,7 +110,7 @@ Any YES/NO question on a form that doesn't match a webCheck is automatically cla
 
 ### Anti-hallucination design (evidence integrity)
 
-- A finding can only be **Met/Not Met** if the model returns a **verbatim quote**; the backend then checks that quote actually appears in the captured page text — if not, the finding is auto-downgraded to **Needs Review** and flagged.
+- A finding can only be **Match/Pass or No Match/Fail** if the model returns a **verbatim quote**; the backend then checks that quote actually appears in the captured page text — if not, the finding is auto-downgraded to **Needs Review** and flagged. (Internally the statuses are stored as the stable values `Met` / `Not Met` / `Needs Review`; the wording shown to reviewers lives in one map, `backend/lib/labels.js`.)
 - Screenshots are real captures of the live page, stamped at capture time. The tool never renders "evidence" itself.
 - Bot-blocked or unreachable pages produce honest **Needs Review** results with the block noted in the report.
 
@@ -127,10 +127,14 @@ Any YES/NO question on a form that doesn't match a webCheck is automatically cla
 - **PHI handling:** sample data here is synthetic. In production, participant fields (name, age, outcomes) would be redacted/minimized before any third-party API call, or the LLM would run in a HIPAA-eligible environment (e.g. Gemini on Vertex AI with a BAA); evidence bundles would live in access-controlled storage with retention policies.
 - Queueing + persistence for jobs, user auth/roles, audit logging of reviewer overrides (partially present — overrides are recorded in the report), retry/monitoring, golden-set regression tests against the reviewer key, and legal review of site terms for automated access.
 
-## The three committed demonstration runs
+## The committed demonstration runs — all 7 form categories
 
-| Sample | Why it was chosen | Expected shape of result |
+| Sample | What it demonstrates | Result in the committed report |
 |---|---|---|
-| 01 — GallopNYC community class | clearly-published evidence | fees/schedule found, rate compared |
-| 07 — HRI laptop | **exclusion-list trap** | "Computer Hardware" → flagged Not Met |
-| 10 — Appeal (Gracie Barra) | appeal workflow | checks re-run against the denial reason |
+| 01 — Community Class (GallopNYC) | clearly-published evidence | fees, public status etc. Match/Pass with highlighted captures; $80 rate "matches application exactly"; unpublished schedule honestly flagged |
+| 03 — Coaching (92NY Parenting) | **ambiguous / gated pricing** | pricing sits behind a session-gated page → every check honestly Needs Review |
+| 04 — Membership (Planet Fitness) | membership fee comparison | all three membership checks Match/Pass; published fee matches the form exactly |
+| 07 — HRI (laptop) | **exclusion-list trap** | "Computer Hardware" → flagged **No Match/Fail** even though Amazon blocks automated browsers |
+| 08 — OTPS (weighted blanket) | bot-blocked product page | exclusion check still resolves (Match/Pass — a blanket isn't excluded); price checks Needs Review with the block page captured as evidence |
+| 09 — Transition Program (LaGuardia CC) | needs-document item | noncredit/skill-building and not-OPWDD-location Match/Pass; background-screening auto-flagged "needs document"; fees Needs Review |
+| 10 — Appeal (Gracie Barra) | appeal workflow | community-class checks re-run against the denial reason; website evidence explicitly **supports** the original denial (no fees published) |

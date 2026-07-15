@@ -16,7 +16,7 @@ We will build a local web-based application using:
     4. Managing interactive natural language commands (updating status, adding notes, re-running).
 - **Frontend**: React + Vite (Vanilla CSS)
   - Interactive dashboard showing current files and previous reports.
-  - Interactive Report Editor: lists extracted fields, rate comparisons, checklist status (Met/Not Met/Needs Review), and inline evidence screenshots.
+  - Interactive Report Editor: lists extracted fields, rate comparisons, checklist status (Match/Pass, No Match/Fail, Needs Review), and inline evidence screenshots.
   - Chat Sidebar: allows plain-language commands to modify the report or re-run checks.
   - Exports a unified shareable report bundle.
 
@@ -87,8 +87,8 @@ The Playwright agent loop for researching provider websites:
 
 #### [NEW] [checklistEvaluator.js](file:///c:/Users/achyu/Preapproval-verification-challenge-submission/backend/checklistEvaluator.js)
 Takes the extracted website content and the requested form details, and runs Gemini evaluation prompts for each website-verifiable checklist item.
-- Returns per-item status: `Met` / `Not Met` / `Needs Review` / `Internal` (internal items pass through from config untouched — never evaluated or guessed).
-- **Evidence-integrity guardrail:** every `Met`/`Not Met` verdict must cite a verbatim quote from the actually-captured page text plus the evidence URL; the prompt instructs the model to return `Needs Review` when no direct quote exists. Quotes are programmatically checked to appear in the captured text before being accepted (anti-hallucination check).
+- Returns per-item status: `Match/Pass` / `No Match/Fail` / `Needs Review` / `Internal` (stored canonically as `Met`/`Not Met`/`Needs Review`; display wording lives in `backend/lib/labels.js`). Internal items pass through from config untouched — never evaluated or guessed.
+- **Evidence-integrity guardrail:** every `Match/Pass` or `No Match/Fail` verdict must cite a verbatim quote from the actually-captured page text plus the evidence URL; the prompt instructs the model to return `Needs Review` when no direct quote exists. Quotes are programmatically checked to appear in the captured text before being accepted (anti-hallucination check).
 - **Rate comparison:** compares the form's stated fee against the published fee and emits a plain-language verdict ("matches application exactly" / "differs" / "not published"), plus the fee-cap sanity check from config.
 - **Appeal mode:** evaluates against the denial reason extracted from the form and explicitly states whether the website evidence supports or refutes it.
 
@@ -109,8 +109,8 @@ Main SPA layout:
 - **Dashboard View**: File upload widget, list of samples, previous reports history.
 - **Reviewer View**:
   - Left panel: Extracted form details and pricing match comparison.
-  - Middle panel: Interactive checklist. Displays "Met" (green), "Not Met" (red), "Needs Review" (yellow), and "Internal" (gray). Clicking an item shows the specific evidence note and targeted screenshot.
-  - Right panel: Interactive Chat Sidebar. Let's the reviewer type feedback (e.g. "Mark public schedule as Met because the schedule is on their homepage", "change fee to $50 and re-run").
+  - Middle panel: Interactive checklist. Displays "Match/Pass" (green), "No Match/Fail" (red), "Needs Review" (yellow), and "Internal" (gray). Clicking an item shows the specific evidence note and targeted screenshot.
+  - Right panel: Interactive Chat Sidebar. Lets the reviewer type feedback (e.g. "Mark public schedule as Match/Pass because the schedule is on their homepage", "change fee to $50 and re-run").
 - Styled using a premium dark-themed Vanilla CSS layout with glassmorphic panels and transitions.
 
 ---
