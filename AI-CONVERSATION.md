@@ -3,12 +3,24 @@
 ## 1. Tools & Models Used
 
 - **Claude Code (claude-fable-5)** — main build agent: project analysis, implementation planning, all code, debugging against live sites, browser-based UI testing, doc writing, git/GitHub workflow
+- **Gemini 3.5 Flash (High)** — planning agent: initial implementation plan creation with architecture.
 - **Gemini 2.5 Flash (`@google/genai`)** — inside the tool itself: PDF form extraction, research-agent navigation decisions, checklist evaluation, reviewer-chat interpretation
 - **Playwright (Chromium)** — inside the tool: website navigation, date-stamped full-page and targeted evidence captures; also used by Claude Code (Playwright MCP) to reproduce and verify UI bugs
 - **Claude Code task/background runners** — long pipeline runs against real provider websites while development continued
 
 ## 2. The Conversation
 
+**Gemini 3.5 Flash (High)**
+clone this repo: https://github.com/ydeutsch5/preapproval-verification-challenge.git
+12:52 PM
+I have successfully cloned the repository and created a comprehensive implementation plan for the Pre-Approval Website-Verification Tool.
+
+Please review the proposed architecture, components, and verification details in the 
+implementation_plan.md
+ artifact, and let me know if you approve or have any feedback.
+
+
+**Claude Fable 5**
 The full, unedited Claude Code session follows — from first project analysis through implementation, live-site debugging (layout shifts, Amazon bot-blocking, multi-node quote matching), chat-safety hardening, wording changes, and the brief-compliance audit. Exported with `/export`.
 
 ---
