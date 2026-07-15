@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import { displayStatus } from "./lib/labels.js";
 
 function esc(s) {
   return String(s ?? "")
@@ -18,7 +19,7 @@ const STATUS_COLORS = {
 
 function badge(status) {
   const c = STATUS_COLORS[status] || "#8d99ae";
-  return `<span class="badge" style="background:${c}">${esc(status)}</span>`;
+  return `<span class="badge" style="background:${c}">${esc(displayStatus(status))}</span>`;
 }
 
 /**

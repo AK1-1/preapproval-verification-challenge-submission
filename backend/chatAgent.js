@@ -4,6 +4,7 @@ import { Type } from "@google/genai";
 import { generateJson } from "./lib/gemini.js";
 import { generateReport, loadReport } from "./reportGenerator.js";
 import { ROOT, SAMPLES_DIR, UPLOADS_DIR } from "./lib/config.js";
+import { displayStatus } from "./lib/labels.js";
 
 const VALID_STATUSES = ["Met", "Not Met", "Needs Review"];
 const MAX_NOTE_LENGTH = 2000;
@@ -52,7 +53,7 @@ function validateAction(state, action) {
         findingId: f.id,
         status: action.status,
         text,
-        description: `Change "${f.label}" from ${f.status} to ${action.status}${text ? ` (reason: ${text})` : ""}`,
+        description: `Change "${f.label}" from ${displayStatus(f.status)} to ${displayStatus(action.status)}${text ? ` (reason: ${text})` : ""}`,
       };
     }
     case "add_finding_note": {
@@ -103,6 +104,7 @@ ${findingsDesc}
 
 Available actions:
 - set_status: change a finding's status (findingId + status Met/Not Met/Needs Review + text = the reviewer's reason).
+  NOTE: the UI shows Met as "Match/Pass" and Not Met as "No Match/Fail" — when the reviewer says "match", "pass", "fail", "no match", or similar, map it to the canonical value (Met / Not Met / Needs Review) in the action.
 - add_finding_note: append a note to one finding (findingId + text).
 - add_note: append a general reviewer note to the report (text).
 - rerun: re-run the whole website verification.
@@ -143,7 +145,7 @@ export function applyActions(reportDir, actions, { startJob } = {}) {
       const f = state.findings.find((x) => x.id === action.findingId);
       const prev = f.status;
       f.status = action.status;
-      f.note = `${f.note || ""} [Reviewer override ${stamp}: ${prev} -> ${action.status}${action.text ? ` — ${action.text}` : ""}]`.trim();
+      f.note = `${f.note || ""} [Reviewer override ${stamp}: ${displayStatus(prev)} -> ${displayStatus(action.status)}${action.text ? ` — ${action.text}` : ""}]`.trim();
       f.reviewerOverride = true;
       applied.push(action.description);
     } else if (action.type === "add_finding_note") {

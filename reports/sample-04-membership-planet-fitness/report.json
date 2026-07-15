@@ -1,0 +1,183 @@
+{
+  "id": "sample-04-membership-planet-fitness",
+  "parsed": {
+    "category": "membership",
+    "participantName": "Rivka S.",
+    "requestedItem": "Classic Gym Membership",
+    "providerName": "Planet Fitness",
+    "url": "https://www.planetfitness.com/gyms",
+    "statedFee": "$15.00 Monthly",
+    "checklistAnswers": [
+      {
+        "question": "Is Health-club/Organizational Membership currently approved in the budget?",
+        "answer": "YES"
+      },
+      {
+        "question": "Does the membership provide opportunity for community inclusion?",
+        "answer": "YES"
+      },
+      {
+        "question": "Does the membership accommodate the individual's health and/or safety needs?",
+        "answer": "YES"
+      },
+      {
+        "question": "Does the membership increase independence or substitute for human assistance?",
+        "answer": "YES"
+      },
+      {
+        "question": "Is the membership provided exclusively toward the benefit of the participant? (not family)",
+        "answer": "YES"
+      },
+      {
+        "question": "Is the organization open to the public and not a private/invitation-only club?",
+        "answer": "YES"
+      }
+    ],
+    "missingInfo": [],
+    "appeal": null,
+    "brokerName": "Michael Ross",
+    "fiCoordinator": "Leah Stern",
+    "formTitle": "Health Club / Organizational Memberships Pre-approval Checklist",
+    "lpDate": "03/22/2026",
+    "participantAge": "31",
+    "valuedOutcome": "Rivka will increase physical activity and community inclusion through a public gym membership."
+  },
+  "category": {
+    "key": "membership",
+    "label": "Health-Club / Organizational Membership",
+    "detectHints": [
+      "Membership",
+      "memberships preapproval"
+    ],
+    "rateFieldLabel": "Membership Fee",
+    "webChecks": [
+      {
+        "id": "open-to-public",
+        "label": "Organization is open to the public (not private/invitation-only)",
+        "criteria": "Anyone from the general public must be able to join (public 'join'/'sign up' flow, published membership tiers). Private or invitation-only clubs fail."
+      },
+      {
+        "id": "published-fee",
+        "label": "Membership fee is published",
+        "criteria": "A concrete membership price (monthly or yearly) must be publicly visible."
+      },
+      {
+        "id": "fee-match",
+        "label": "Published membership fee matches the form (yearly/monthly)",
+        "type": "rate-comparison",
+        "criteria": "Compare the membership fee on the application against the published amount, being careful about monthly vs yearly. Verdict: matches application exactly / differs / not published."
+      }
+    ]
+  },
+  "findings": [
+    {
+      "id": "open-to-public",
+      "status": "Met",
+      "note": "The website clearly presents membership options for 'CLASSIC' and 'PF BLACK CARD®' and includes 'Join Now' buttons, indicating it is open to the public.",
+      "evidenceUrl": "https://www.planetfitness.com/gym-memberships",
+      "quote": "Join Now",
+      "label": "Organization is open to the public (not private/invitation-only)",
+      "type": "web-check",
+      "quoteVerified": true,
+      "targetedScreenshot": "screenshots/evidence-open-to-public.png",
+      "targetedCapturedAt": "2026-07-15T16:14:19.476Z"
+    },
+    {
+      "id": "published-fee",
+      "status": "Met",
+      "note": "The website explicitly states the starting monthly fee for Classic memberships.",
+      "evidenceUrl": "https://www.planetfitness.com/gym-memberships",
+      "quote": "*Classic memberships begin at $15 and PF Black Card® memberships begin at $24.99, billed monthly.",
+      "label": "Membership fee is published",
+      "type": "web-check",
+      "quoteVerified": true,
+      "targetedScreenshot": "screenshots/evidence-published-fee.png",
+      "targetedCapturedAt": "2026-07-15T16:14:20.789Z"
+    },
+    {
+      "id": "fee-match",
+      "status": "Met",
+      "note": "The website states that Classic memberships begin at $15, billed monthly, which matches the $15.00 Monthly fee stated on the application form.",
+      "evidenceUrl": "https://www.planetfitness.com/gym-memberships",
+      "quote": "*Classic memberships begin at $15 and PF Black Card® memberships begin at $24.99, billed monthly.",
+      "label": "Published membership fee matches the form (yearly/monthly)",
+      "type": "rate-comparison",
+      "quoteVerified": true,
+      "targetedScreenshot": "screenshots/evidence-fee-match.png",
+      "targetedCapturedAt": "2026-07-15T16:14:21.934Z"
+    }
+  ],
+  "rateComparison": {
+    "formRate": "$15.00 Monthly",
+    "websiteRate": "$15 Monthly",
+    "verdict": "matches application exactly",
+    "note": "The website states that Classic memberships begin at $15, billed monthly, which matches the $15.00 Monthly stated on the form."
+  },
+  "internalItems": [
+    {
+      "question": "Is Health-club/Organizational Membership currently approved in the budget?",
+      "formAnswer": "YES",
+      "websiteVerifiable": false
+    },
+    {
+      "question": "Does the membership provide opportunity for community inclusion?",
+      "formAnswer": "YES",
+      "websiteVerifiable": false
+    },
+    {
+      "question": "Does the membership accommodate the individual's health and/or safety needs?",
+      "formAnswer": "YES",
+      "websiteVerifiable": false
+    },
+    {
+      "question": "Does the membership increase independence or substitute for human assistance?",
+      "formAnswer": "YES",
+      "websiteVerifiable": false
+    },
+    {
+      "question": "Is the membership provided exclusively toward the benefit of the participant? (not family)",
+      "formAnswer": "YES",
+      "websiteVerifiable": false
+    },
+    {
+      "question": "Is the organization open to the public and not a private/invitation-only club?",
+      "formAnswer": "YES",
+      "websiteVerifiable": true
+    }
+  ],
+  "appealAssessment": "",
+  "pages": [
+    {
+      "url": "https://www.planetfitness.com/gyms/",
+      "title": "Gyms Near Me | Fitness Centers Near Me | Planet Fitness",
+      "screenshot": "screenshots/page-1-fullpage.png",
+      "capturedAt": "2026-07-15T16:13:50.319Z",
+      "blocked": false
+    },
+    {
+      "url": "https://www.planetfitness.com/gym-memberships",
+      "title": "Gym Memberships | Starting at $15 | Planet Fitness",
+      "screenshot": "screenshots/page-2-fullpage.png",
+      "capturedAt": "2026-07-15T16:14:01.836Z",
+      "blocked": false
+    }
+  ],
+  "pageTexts": [
+    {
+      "url": "https://www.planetfitness.com/gyms/",
+      "text": "Memberships\nWhy PF\nWork Out With Us\nPF Store\nEnglish\nMy Account\nJoin Now\nMemberships\nWhy PF\nWork Out With Us\nPF Store\nRegion:\nUS (English)\nMy Account\nNeed Help?\nUse my current location\nNo Clubs Nearby\nSorry, there are no PF Clubs within a 100-mile radius of the entered location.\n© Mapbox © OpenStreetMap Improve this map\nDownload the PF App\n\nInfo\n\nNewsroom\nCareers\nFAQs\nDirectory\nBlog\n\nPartners\n\nFranchising\nInvestor Relations\nPF Purpose\nPF Media Network\n\nLegal\n\nPrivacy Policy\nTerms and Conditions of Use\nDo Not Sell or Share My Personal Information\nYour State and EU\nPrivacy Rights\nAccessibility\nRegion:\nUS (English)\n\nFollow us:\n\n© 2026 Planet Fitness Franchising, LLC."
+    },
+    {
+      "url": "https://www.planetfitness.com/gym-memberships",
+      "text": "Memberships\nWhy PF\nWork Out With Us\nPF Store\nEnglish\nMy Account\nJoin Now\nMemberships\nWhy PF\nWork Out With Us\nPF Store\nRegion:\nUS (English)\nMy Account\nNeed Help?\nOur Memberships\nPF BLACK CARD®\nBest Value\n\nAccess to any club, bring a guest anytime, PF+ premium digital workouts, and so much more!\n\nLearn More\nJoin Now\nCLASSIC\n\nOur standard membership, with unlimited access to your home club.\n\nLearn More\nJoin Now\nPF Black Card®\nClassic\nCompare\nThe Membership That Gets You All the Perks\n\nUse of Any Planet Fitness Worldwide\n\nAs a PF Black Card® member, you’ll have the ability to use any of our 2,700+ locations.\n\nBring a Guest Anytime\n\nWorking out is better with a buddy. PF Black Card® members can bring a guest for free every visit!\n\nPF+ Exclusive App Workouts\n\nUnlock exclusive digital workout content, with access to our brand's premium subscription.\n\nFree In-Club Fitness Training ¹\n\nWith our certified fitness trainers you can take a small group fitness class, learn about our extensive range of cardio and strength machines, or create a customized workout plan. It’s all free!\n\nPremium Perks: Partner Rewards & Discounts\n\nMaking fitness even more rewarding. PF Black Card® Members get even more exclusive discounts and special offers.\n\n50% Off Select Drinks\n\nPF Black Card® members get special pricing that makes it easier to opt for healthy beverages.\n\nFree WiFi\n\nEnjoy free WiFi at Planet Fitness. Just ask for the WiFi password at the front desk.\nJoin PF Black Card®\nFREE ACCESS TO THE\nBLACK CARD SPA®\nRelax and Unwind After Your Workout\n\nUse of Massage Chairs\n\nWith a PF Black Card® membership, you can relax and unwind with a massage after your workout (or before – we don’t judge).\n\nUse of HydroMassage® ¹\n\nHydroMassage® is an innovative water massage for wellness and muscle recovery. Powerful waves of heated water massage target specific areas for a personalized and relaxing experience.\n\nUse of Tanning ¹\n\nAn exclusive benefit for PF Black Card® members.\n\nUse of Total Body Enhancement ¹\n\nThis booth features a UV free application of red light, which pairs with vibra-shape technology.\n\nUse Of Wellness Pod ¹\n\nA relaxing and rejuvenating escape awaits in the Wellness Pod! Personalize your session by choosing your visual, audio, temperature and scent preferences.\n\nUse of Recovery Lounge ¹\n\nThe Recovery Lounge offers targeted cold for soreness and aches, complemented by warmth in other areas for comfort. This balanced approach ensures a holistic and refreshing recovery, ideal post-workout.\nJoin PF Black Card®\nCLASSIC\nGet High-Quality Fitness at an Affordable Price\n\nUnlimited Access to Home Club\n\nCome in anytime, as often as you like.\n\nPF App Workouts\n\nCheck out the FREE PF App for tons of on-demand workouts for all fitness levels and styles.\n\nFree In-Club Fitness Training ¹\n\nWith our certified fitness trainers you can take a small group fitness class, learn about our extensive range of cardio and strength machines, or create a customized workout plan. It’s all free!\n\nFree WiFi\n\nEnjoy free WiFi at Planet Fitness. Just ask for the WiFi password at the front desk.\n\nPerks: Partner Rewards & Discounts\n\nMaking fitness even more rewarding. Members get exclusive discounts and special offers.\nJoin Classic\n\nNot sure which membership plan is right for you?\n\nHide Comparison Chart\n\nPF BLACK CARD®\n\n\t\n\nCLASSIC\n\nUse of Any Planet Fitness Worldwide\n\n\tUnlimited Access to Home Club\n\nFree In-Club Fitness Training ¹\n\n\tFree In-Club Fitness Training ¹\n\nPF+ Exclusive App Workouts\n\n\tPF App Workouts\n\nFree WiFi\n\n\tFree WiFi\n\nPremium Perks: Partner Rewards & Discounts\n\n\tPerks: Partner Rewards & Discounts\n\nBring a Guest Anytime\n\n\t\n\nUse of Massage Chairs\n\n\t\n\nUse of HydroMassage® ¹\n\n\t\n\nUse of Tanning ¹\n\n\t\n\nUse of Total Body Enhancement ¹\n\n\t\n\n50% Off Select Drinks\n\n\t\n\nWellness Pod ¹\n\n\t\n\nUse of Recovery Lounge ¹\n\n\t\nHide Comparison Chart\nFind a Club Near You\nFind a Club\nMemberships FAQs\n\nWhat’s the difference between PF Black Card® and Classic memberships?\n\nPlanet Fitness offers two membership options: PF Black Card® and Classic. With a PF Black Card®, you will have access to all Planet Fitness clubs worldwide, while the Classic membership gives you access to your home club location. Additionally, as a PF Black Card® member you will have access to several amenities that are not available to Classic members such as the option to bring a guest anytime, access to the PF Black Card® Spa, and other exclusive PF Black Card® perks.\n\nHow old do I have to be to get a Planet Fitness membership?\n\nYou can join PF if you are 13 years or older with a parent/legal guardian's permission. Members aged 13 must be accompanied by a parent or guardian when they work out. Many clubs also require that members aged 14 must be accompanied by a parent/guardian at all times. Members who are 15-17 years old (15-18 in regions where 19 is the age of majority) must have a signed waiver from a parent or guardian. For further questions or clarifications regarding age policy, reach out to your local club for more details.\n\nDoes Planet Fitness offer classes or personal training?\n\nYes. We offer free fitness training in small group formats that are first come, first serve. Fitness classes are led by certified fitness trainers and are available to all Planet Fitness members. All trainers must be employed by the club franchise location. Outside trainers are not allowed. Please see your home club for details.\n\nAdditionally, our PF App is equipped with tons of helpful routines from beginner-level workouts to advanced fitness training. Simply select \"Workouts\" at the bottom of the home tab to access dozens of training videos. Also, each of our machines is equipped with a unique QR code. Simply scan the QR scanner located at the top right corner of the Tutorials section of the PF App. You will immediately receive instruction on how to use the equipment!\n\nWhat are my club's hours?\n\nPlease visit Gyms Near Me and click on \"Club Details\" to get more information on specific club details including club hours, class schedules, and more.\n\nWhat does it mean if a membership has a commitment?\n\nThe Commitment length associated with your membership is the minimal number of months you will be billed. If you cancel before this time, you may be subject to a buyout fee. For No Commitment memberships, you may cancel at anytime without paying a fee.\n\nWhy do you need my checking account for a membership?\n\nThe method in which members are able to pay for their monthly membership varies by location, but many Planet Fitness clubs accept payment through checking accounts only. We require an Electronic Funds Transfer (EFT) through checking accounts for your convenience: This allows us to be able to continue your membership without interruption or the need to update your payment information if your credit card is lost, stolen, invalid, or expired.\n\nHow do I make changes to my membership?\n\nYou can make changes to your membership by contacting your home club or logging into your account online at My Account | Planet Fitness .\n\nHave More Questions?\n\nItems marked with a ¹ are available at participating locations only. See home club for details.\n\n*Classic memberships begin at $15 and PF Black Card® memberships begin at $24.99, billed monthly. Memberships may include 12-month commitment. State and local taxes may apply. Subject to an annual fee of $49. Prices may vary depending on location. Services and perks subject to availability and restrictions. Must be at least 18 years old to enroll, or 13-17 with parent/guardian. State and local restrictions on tanning frequency with PF Black Card® memberships apply. Participating locations only. Locations independently owned and operated. See home club for details. We reserve the right to correct pricing errors or withdraw offer at any time.©2026 Planet Fitness Franchising LLC\n\nDownload the PF App\n\nInfo\n\nNewsroom\nCareers\nFAQs\nDirectory\nBlog\n\nPartners\n\nFranchising\nInvestor Relations\nPF Purpose\nPF Media Network\n\nLegal\n\nPrivacy Policy\nTerms and Conditions of Use\nDo Not Sell or Share My Personal Information\nYour State and EU\nPrivacy Rights\nAccessibility\nRegion:\nUS (English)\n\nFollow us:\n\n© 2026 Planet Fitness Franchising, LLC."
+    }
+  ],
+  "reviewerNotes": [],
+  "meta": {
+    "reviewDate": "2026-07-15 16:14:23 UTC",
+    "model": "gemini-2.5-flash",
+    "sourceFile": "Sample-04---Membership-Planet-Fitness.pdf",
+    "toolVersion": "1.0.0"
+  },
+  "needsClarification": false
+}

@@ -7,6 +7,14 @@ const STATUS_CLASS = {
   Internal: "internal",
 };
 
+// Reviewer-facing wording; canonical values stay stable in report data.
+const STATUS_LABELS = {
+  Met: "Match/Pass",
+  "Not Met": "No Match/Fail",
+  "Needs Review": "Needs Review",
+  Internal: "Internal",
+};
+
 async function api(path, options) {
   const res = await fetch(path, options);
   if (!res.ok) {
@@ -17,7 +25,7 @@ async function api(path, options) {
 }
 
 function Badge({ status }) {
-  return <span className={`badge ${STATUS_CLASS[status] || "internal"}`}>{status}</span>;
+  return <span className={`badge ${STATUS_CLASS[status] || "internal"}`}>{STATUS_LABELS[status] || status}</span>;
 }
 
 // ---------------- Dashboard ----------------

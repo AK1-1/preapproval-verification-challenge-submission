@@ -8,6 +8,7 @@ import path from "path";
 import fs from "fs";
 import { runPipeline } from "./pipeline.js";
 import { SAMPLES_DIR } from "./lib/config.js";
+import { displayStatus } from "./lib/labels.js";
 
 const DEFAULT_SAMPLES = [
   "Sample-01---Community-Class-GallopNYC.pdf",
@@ -35,7 +36,7 @@ for (const file of files) {
     console.log(`\n  Summary for ${state.parsed.participantName} — ${state.parsed.requestedItem}:`);
     console.log(`    Rate verdict: ${state.rateComparison?.verdict}`);
     for (const f of state.findings) {
-      console.log(`    [${f.status}] ${f.label}`);
+      console.log(`    [${displayStatus(f.status)}] ${f.label}`);
     }
     if (state.needsClarification) {
       console.log(`    ⚠ Clarification needed: ${state.parsed.missingInfo.join(" | ")}`);
